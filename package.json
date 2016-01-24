@@ -1,0 +1,35 @@
+{
+  "name": "vendor",
+  "description": "Vendor: a signup page including a carasoul for a simple SAP project",
+  "version": "0.5.5",
+  "private": false,
+  "author": "Dylan Peti <dylanpetiinfo@gmail.com>",
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/DylanPeti/vendor.git"
+},
+ "scripts": {
+    "start": "node server"
+},
+  "dependencies": {
+     "body-parser": "latest",
+     "express": "latest",
+     "mongoose": "latest"
+  },
+  "devDependencies": {
+  	"gulp": "latest",
+    "gulp-coffee": "latest",
+    "gulp-concat": "latest",
+    "gulp-csslint": "latest",
+    "gulp-cssmin": "latest",
+    "gulp-jshint": "latest",
+    "gulp-less": "latest",
+    "gulp-livereload": "latest",
+    "gulp-load-plugins": "latest",
+    "gulp-mocha": "latest",
+    "gulp-nodemon": "latest",
+    "gulp-sass": "latest",
+    "gulp-uglify": "latest",
+    "gulp-util": "latest"
+  }
+}
