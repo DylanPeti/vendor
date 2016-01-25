@@ -4,7 +4,9 @@
  * Render the main applicaion page
  */
 exports.renderIndex = function(req, res) {
-	 res.sendfile('./modules/index.html');
+	 res.render('index', function(err, html){
+	 	res.send(html);
+	 });
 };
 
 /**
