@@ -5,31 +5,56 @@
   "private": false,
   "author": "Dylan Peti <dylanpetiinfo@gmail.com>",
   "repository": {
-  "type": "git",
-  "url": "https://github.com/DylanPeti/vendor.git"
-},
- "scripts": {
-    "start": "node server"
-},
+    "type": "git",
+    "url": "https://github.com/DylanPeti/vendor.git"
+  },
+  "scripts": {
+    "start": "node server",
+    "test": "grunt test"
+  },
   "dependencies": {
-     "body-parser": "latest",
-     "express": "latest",
-     "mongoose": "latest"
+    "body-parser": "latest",
+    "express": "latest",
+    "grunt": "latest",
+    "grunt-cli": "latest",
+    "lodash": "latest",
+    "mongoose": "latest",
+    "passport": "^0.3.2",
+    "swig": "^1.4.2"
   },
   "devDependencies": {
-  	"gulp": "latest",
+    "grunt-env": "latest",
+    "grunt-node-inspector": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-csslint": "latest",
+    "grunt-ng-annotate": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-nodemon": "latest",
+    "grunt-concurrent": "latest",
+    "grunt-mocha-test": "latest",
+    "grunt-karma": "latest",
+    "grunt-protractor-runner": "latest",
+    "grunt-contrib-sass": "latest",
+    "grunt-contrib-less": "latest",
+    "load-grunt-tasks": "latest",
+    "gulp": "latest",
     "gulp-coffee": "latest",
     "gulp-concat": "latest",
     "gulp-csslint": "latest",
     "gulp-cssmin": "latest",
+    "gulp-install": "^0.6.0",
     "gulp-jshint": "latest",
     "gulp-less": "latest",
     "gulp-livereload": "latest",
     "gulp-load-plugins": "latest",
     "gulp-mocha": "latest",
     "gulp-nodemon": "latest",
+    "gulp-rename": "latest",
     "gulp-sass": "latest",
     "gulp-uglify": "latest",
-    "gulp-util": "latest"
+    "gulp-util": "latest",
+    "run-sequence": "latest"
   }
 }

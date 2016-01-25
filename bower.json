@@ -8,11 +8,10 @@
     "angular-mocks": "latest",
     "angular-route": "latest",
     "bootstrap": "latest",
-    "angular-bootstrap": "latest",
+    "angular-bootstrap": "~1.1.1",
     "angular-ui-router": "#master",
-    "bootstrap": "latest",
     "angular-ui-select": "latest",
-    "angular-sanitize": "latest"
+    "angular-sanitize": "latest",
+    "angular-animate": "latest"
   }
 }
-
