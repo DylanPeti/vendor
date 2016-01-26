@@ -1,6 +1,7 @@
 // server.js
 
 // modules =================================================
+
 var express        = require('express');
 var app            = express();
 var bodyParser     = require('body-parser');
@@ -36,7 +37,19 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(methodOverride('X-HTTP-Method-Override')); 
 
 // set the static files location /public/img will be /img for users
-//app.use(express.static(__dirname + '/modules')); 
+
+
+
+
+
+
+// routes ==================================================
+require('./modules/core/core/server/routes/core.server.routes')(app); // configure our routes
+
+app.use(express.static(__dirname + '/public')); 
+app.use(express.static(__dirname + '/modules')); 
+
+
 
 
 app.engine('html', swig.renderFile);
@@ -47,12 +60,6 @@ app.set('view cache', false);
 // To disable Swig's cache, do the following:
 swig.setDefaults({ cache: false });
 // NOTE: You should always cache tem
-
-
-
-
-// routes ==================================================
-require('./modules/core/core/server/routes/core.server.routes')(app); // configure our routes
 
 // start app ===============================================
 // startup our app at http://localhost:8080

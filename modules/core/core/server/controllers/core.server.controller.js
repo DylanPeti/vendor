@@ -4,10 +4,14 @@
  * Render the main applicaion page
  */
 exports.renderIndex = function(req, res) {
-	 res.render('index', function(err, html){
-	 	res.send(html);
-	 });
+	 res.render('index');
 };
+
+// exports.renderHome = function(req, res) {
+// 	 res.render('index', {
+// 	 	url: '/home'
+// 	 });
+// };
 
 /**
  * Render the server error page
