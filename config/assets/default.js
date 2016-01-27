@@ -24,13 +24,13 @@ module.exports = {
 			// tests: ['modules/lib/angular-mocks/angular-mocks.js']
 		},
 		css: [
-			'modules/*/client/css/*.css'
+			'css/*.css'
 		],
 		less: [
 			'modules/*/client/less/*.less'
 		],
 		sass: [
-			'modules/*/client/scss/*.scss'
+			'modules/core/client/scss/*.scss'
 		],
 		js: [
 			'modules/*/client/*.js',

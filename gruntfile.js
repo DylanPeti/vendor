@@ -31,7 +31,6 @@ module.exports = function (grunt) {
 			},
 			serverJS: {
 				files: defaultAssets.server.allJS,
-				tasks: ['jshint'],
 				options: {
 					livereload: true
 				}
@@ -44,28 +43,25 @@ module.exports = function (grunt) {
 			},
 			clientJS: {
 				files: defaultAssets.client.js,
-				tasks: ['jshint'],
 				options: {
 					livereload: true
 				}
 			},
 			clientCSS: {
 				files: defaultAssets.client.css,
-				tasks: ['csslint'],
 				options: {
 					livereload: true
 				}
 			},
 			clientSCSS: {
 				files: defaultAssets.client.sass,
-				tasks: ['sass', 'csslint'],
+				tasks: ['sass'],
 				options: {
 					livereload: true
 				}
 			},
 			clientLESS: {
 				files: defaultAssets.client.less,
-				tasks: ['less', 'csslint'],
 				options: {
 					livereload: true
 				}
@@ -136,6 +132,7 @@ module.exports = function (grunt) {
 				files: [{
 					expand: true,
 					src: defaultAssets.client.sass,
+					dest: 'public/css',
 					ext: '.css',
 					rename: function(base, src) {
 						return  src.replace('/scss/', '/css/');
@@ -213,21 +210,23 @@ module.exports = function (grunt) {
 		});
 	});
 
+
+
 	// Lint CSS and JavaScript files.
 	grunt.registerTask('lint', ['sass', 'less', 'jshint', 'csslint']);
 
-	// Lint project files and minify them into two production files.
+	// // Lint project files and minify them into two production files.
 	grunt.registerTask('build', ['env:dev', 'lint', 'ngAnnotate', 'uglify', 'cssmin']);
 
-	// Run the project tests
-	grunt.registerTask('test', ['env:test', 'mongoose', 'mochaTest', 'karma:unit']);
+	// // Run the project tests
+	// grunt.registerTask('test', ['env:test', 'mongoose', 'mochaTest', 'karma:unit']);
 
-	// Run the project in development mode
+	// // Run the project in development mode
 	grunt.registerTask('default', ['env:dev', 'lint', 'concurrent:default']);
 
-	// Run the project in debug mode
-	grunt.registerTask('debug', ['env:dev', 'lint', 'concurrent:debug']);
+	// // Run the project in debug mode
+	// grunt.registerTask('debug', ['env:dev', 'lint', 'concurrent:debug']);
 
-	// Run the project in production mode
-	grunt.registerTask('prod', ['build', 'env:prod', 'concurrent:default']);
+	// // Run the project in production mode
+	// grunt.registerTask('prod', ['build', 'env:prod', 'concurrent:default']);
 };
