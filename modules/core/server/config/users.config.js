@@ -19,8 +19,6 @@ module.exports = function(app, db) {
 		done(null, user.id);
 	});
 
-	
-
 	// Deserialize sessions
 	passport.deserializeUser(function(id, done) {
 		User().findOne({
@@ -30,50 +28,36 @@ module.exports = function(app, db) {
 		});
 	});
 
-
-
 	passport.use(new LocalStrategy({
 			usernameField: 'email',
 			passwordField: 'password'
 		},
 		function(email, password, done) {
             console.log('Hey! no more 400 error!');
-			// db.collection(users, function (error, collection) {
+       
+       //find the user
+			User.findOne({
+				email: email
+			}, function(err, user) {
+				if (err) {
+					return done(err);
+				}
+				if (!user) {
+					return done(null, false, {
+						message: 'Unknown email'
+					});
+				}
+				if (!user.authenticate(password)) {
+					return done(null, false, {
+						message: 'Invalid password'
+					});
+				}
 
-			// });
-
-
-
-			// User.findOne({
-			// 	email: email
-			// }, function(err, user) {
-			// 	if (err) {
-			// 		return done(err);
-			// 	}
-			// 	if (!user) {
-			// 		return done(null, false, {
-			// 			message: 'Unknown email'
-			// 		});
-			// 	}
-			// 	if (!user.authenticate(password)) {
-			// 		return done(null, false, {
-			// 			message: 'Invalid password'
-			// 		});
-			// 	}
-
-			// 	return done(null, user);
-			// });
+				return done(null, user);
+			});
 		}
 	));
 
-	// Initialize strategies
-	// config.utils.getGlobbedPaths(path.join(__dirname, './strategies/**/*.js')).forEach(function(strategy) {
-	// 	require(path.resolve(strategy))(config);
-	// });
-
-	// Add passport's middleware
-	
-  
 
 	app.use(passport.initialize());
 	app.use(passport.session());

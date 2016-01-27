@@ -1,8 +1,6 @@
 'use strict';
 
 var passport = require('passport');
-var bodyParser = require('body-parser');
-var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 module.exports = function(app) {
 	// Root routing
@@ -17,5 +15,6 @@ module.exports = function(app) {
 	app.route('/').get(core.renderIndex);
 	app.route('/home').get(core.renderIndex);
 
+   // Define User routes
 	app.route('/api/auth/signin').post(user.signin);
 };

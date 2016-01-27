@@ -1,4 +1,6 @@
-// server.js
+/**
+ * Mo modules
+ */
 
 
 var express        = require('express');
@@ -12,55 +14,31 @@ var consolidate = require('consolidate');
 var LocalStrategy = require('passport-local').Strategy;
 var swig           = require('swig');
 var User           = require('./config/models/mongoose');
-
-
-
-
 var db = require('./config/env/all');
-
-
 var port = process.env.PORT || 3000; 
 
-
+// most important part of auth. Body parser only JSON and urlencoded data
 
 app.use(bodyParser.urlencoded({ extended: true }) );
+
 app.use(bodyParser.json());
-	// Add passport's middleware
-
-
-
-
-
-
-// app.use(bodyParser.urlencoded({ extended: false })); 
-
 
 mongoose.connect('mongodb://localhost/vendor');
 
+// For sessions. A bit overkill
 // app.use(express_session({ secret: 'keyboard cat', resave: true, saveUninitialized: true }));
 
+//Set up passport auth localstrategy
 require('./modules/core/server/config/users.config.js')(app);
-// require('./modules/core/server/config/strategies/local.js')(app);
+
+//Routes 
 require('./modules/core/server/routes/core.server.routes')(app); 
 
 app.use(express.static(__dirname + '/public')); 
 app.use(express.static(__dirname + '/modules')); 
 
 
-
-
-// var newUser = User({
-//   name: 'Dylan',
-//   email: 'dylan@gomomentum.marketing',
-//   password: 'theclub01',
-//   provider: 'local'
-// });
-
-// newUser.save(function(err) {
-//   if (err) throw err;
-//   console.log('User created!');
-// });
-
+// Use swig as the templating engine
 
 app.engine('html', swig.renderFile);
 app.set('view engine', 'html');
@@ -72,7 +50,7 @@ swig.setDefaults({ cache: false });
 
 
 app.listen(port);	
-console.log('Magic happens on port ' + port); 			// shoutout to the user
-exports = module.exports = app; 						// expose app
+console.log('Hot fire!!' + port); 		
+exports = module.exports = app; 						
 
 
