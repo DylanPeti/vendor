@@ -1,5 +1,252 @@
-$hello: #333;
-
 body {
-	color: $hello;
+width: 100%;
+height: 100%;
+margin: 0;
+padding: 0;
 }
+
+
+h4 {
+  text-transform: uppercase;
+}
+
+h2 {
+}
+span {
+
+}
+h5 {
+  color: #f5f4f4;
+}
+
+p {
+
+}
+
+a {
+color: #589ee1;
+}
+
+a, .helper {
+  
+}
+
+ul {
+list-style: none;
+}
+
+.btn-logout{
+color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+display: block;
+    margin: 20px auto 0 auto;
+    width: 200px;  
+    height: 45px;
+color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    display: block;
+    box-shadow: none;
+    border: none;
+    border-radius: 3px;
+}
+
+
+.helper {
+  color: #989898;
+}
+
+.primary-btns {
+   background-color: #44b773;
+   color: #fff;
+}
+
+input[type="text"], input[type="password"] {
+   color: #f5f4f4;
+   border: 2px solid #f5f4f4;
+   border-radius: 0;
+   height: 40px;
+   margin-bottom: 10px;
+   box-shadow: none;
+}
+
+
+.header {
+position: relative;
+width: 100%;
+height: 40px;
+background-color: #404040;
+color: #c9c9c9;
+}
+
+.header ul li{
+    display: inline-block;
+    line-height: 40px;
+    padding: 0 20px;
+}
+
+.header .toolbar-left {
+float: left;
+}
+
+.header .toolbar-right {
+float: right;
+}
+
+.toolbar-right-items {
+float: left;
+}
+.toolbar-right-icons {
+float: right;
+}
+
+.header ul li .talk, .header ul li .phone, .header ul li .language {
+position: relative;
+width: 20px;
+height: 40px;
+background-size: contain;
+}
+
+
+
+.header ul li .talk {
+background: #404040 url('/img/chat_icon.svg') no-repeat 50% 50%;
+}
+
+.header ul li .phone {
+background: #404040 url('/img/phone_icon.svg') no-repeat 50% 50%;
+}
+
+.header ul li .language {
+background: #404040 url('/img/flag-nz.svg') no-repeat 50% 50%;
+}
+
+.bk-home {
+position: relative;
+width: 100%;
+height: calc(100vh - 40px);
+background: #fff url('/img/bk-home.jpg') no-repeat 50% 50%;
+background-size: cover;
+}
+
+section#signin {
+position: absolute;
+top: 100px;
+left: 50%;
+transform: translateX(-50%);
+display: block;
+    width: 60%;
+    height: 400px;
+    background-color: #fff;
+}
+
+.product-feature-content {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.product-feature-box {
+width: calc(99.9%/3);
+height: 100%;
+float: left;
+padding: 50px 40px;
+background-color: #404040;
+color: #c9c9c9;
+}
+
+.product-feature-title {
+    width: 100%;
+    height: 50px;
+}
+
+.product-feature-img {
+
+width: 100%;
+height: 140px;
+background: #fff url('/img/flag-nz.svg') no-repeat 50% 50%;
+background-size: cover;
+
+}
+
+.product-feature-desc {
+  margin-top: 20px;
+}
+
+.signin-box {
+padding: 50px 40px;
+float: left;
+width: 66.6%;
+}
+
+.signin-title{
+    width: 100%;
+height: 50px;
+display: inline-block;
+background: #fff url(' /img/vend-tag-logo.svg') no-repeat 0% 0%;
+}
+.signin-title h1 {
+    padding-left: 130px;
+    line-height: 50px;
+    text-transform: capitalize;
+    margin: 0;
+    font-weight: 200;
+
+}
+
+.signin-locator {
+height: 80px;
+}
+
+.signin-locator h4, .signin-locator span {
+padding-top: 40px;
+}
+
+.signin-locator h4 {
+float: left;
+margin: 0;
+vertical-align: middle;
+}
+
+.signin-locator span {
+color: #d0d0d0;
+float: right;
+}
+
+.signin-header {
+    margin-top: 10px;
+}
+
+.singin-action {
+width: 100%;
+float: left;
+    margin-top: 10px;
+}
+
+.singin-action a {
+    float: left;
+    line-height: 50px;
+}
+
+.singin-action .primary-btns, .btn-primary {
+float: right;
+width: 200px;
+height: 50px;
+}
+
+.welcome {
+background-color: #fcfcfc;
+    border: 1px solid #eee;
+    margin: 100px auto 0 auto;
+    width: 100%;
+    padding: 20px 20px 40px 20px;
+    border-radius: 5px;
+    max-width: 555px;
+}
+
+.welcome h1 {
+text-align: center;
+
+}
+
