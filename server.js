@@ -31,11 +31,25 @@ mongoose.connect('mongodb://localhost/vendor');
 //Set up passport auth localstrategy
 require('./modules/core/server/config/users.config.js')(app);
 
+
+
 //Routes 
 require('./modules/core/server/routes/core.server.routes')(app); 
 
 app.use(express.static(__dirname + '/public')); 
 app.use(express.static(__dirname + '/modules')); 
+
+app.use(function(req, res, next){
+        res.status(404);
+        if (req.accepts('html')) {
+         res.render('core/server/views/404', { url: req.url });
+       return;
+       }
+         // default to plain-text. send()
+        res.type('txt').send('Not found');
+});
+
+
 
 
 // Use swig as the templating engine

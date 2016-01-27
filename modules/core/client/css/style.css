@@ -214,7 +214,7 @@ section#signin {
     line-height: 50px;
 }
 
-.singin-action .primary-btns {
+.singin-action .primary-btns, .btn-primary {
 	float: right;
 	width: 200px;
 	height: 50px;
