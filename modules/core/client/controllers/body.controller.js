@@ -5,3 +5,5 @@ angular.module('vendor').controller('BodyController', ['$scope',
 		$scope.welcome = "welcome";
 	}
 ]);
+
+

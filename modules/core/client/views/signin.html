@@ -7,7 +7,7 @@
     
    	    <ul class="toolbar-right">
    	      <div class="toolbar-right-items">
-   	    	<li>Help</li>
+   	    	<li>{{user.name}}</li>
    	    	<li>Vend U</li>
    	    	<li>Blog</li>
    	      </div>
@@ -22,7 +22,7 @@
    
    <div class="bk-home">
    
-     <section id="signin">
+     <section id="signin" controller="AuthenticationController">
 
      	 	   <div class="product-feature-box">
                 
@@ -38,7 +38,7 @@
      
    
      	 	   <div class="signin-box">
-     	 	       	<form class="signin-header">
+   <form method="post" class="signin-header" name="loginForm" ng-submit="signin()" novalidate>
      	 	       		<div class="signin-title"><h1>Sign in</h1></div>
                         <div class="signin-locator"> 
      	 	       		    <h4>Indie home collective</h4>
@@ -47,17 +47,19 @@
      	 	       		
      	 	       		<fieldset>
 
-     	 	       		    <div class="form-group">
-     	 	       			    <input class="form-control" type="text" value"username" placeholder="Email or Username"/>
-     	 	       		    </div>
+   
+
+     	 	       	<div class="form-group">
+      <input type="text" id="email" name="email" class="form-control" ng-model="credentials.email" placeholder="Email">
+     	 	        </div>
      	 	       		   
      	 	       		    <div class="form-group">
-     	 	       			   <input class="form-control" type="password" value"password" placeholder="Password" />
+  <input type="password" id="password" name="password" class="form-control" ng-model="credentials.password" placeholder="Password">
      	 	       		    </div>
      	 	       		   
      	 	       		    <div class="singin-action">
      	 	       		        <a class="password-forgot" href="#">Forgot your Sign in?</a>
-     	 	       			    <input class="form-control primary-btns" type="submit" value="Sign in" />
+   <button type="submit" class="btn btn-primary">Let Me In Bro</button>
      	 	       			</div>
 
      	 	       		</fieldset>

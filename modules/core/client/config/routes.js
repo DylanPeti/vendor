@@ -4,8 +4,8 @@ angular.module('vendor').config(['$routeProvider', '$locationProvider', function
 
 	$routeProvider
 		.when('/', {
-			templateUrl: '/core/client/views/home.html',
-			controller: 'HomeController'
+			templateUrl: '/core/client/views/signin.html',
+			controller: 'AuthenticationController'
 		})
 
 		.when('/home', {
