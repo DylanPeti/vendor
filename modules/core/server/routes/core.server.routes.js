@@ -8,15 +8,16 @@ module.exports = function(app) {
 	var user = require('../controllers/user.controller');
 
 	// Define error pages
-	app.route('/server-error').get(core.renderServerError);
 	app.route('/not-found').get(core.renderNotFound);
 
 	// Define application route
 	app.route('/').get(core.renderIndex);
 	app.route('/home').get(core.renderIndex);
+	app.route('/welcome').get(core.renderIndex);
 
    // Define User routes
 	app.route('/api/auth/signin').post(user.signin);
+	app.route('/api/auth/signout').get(user.signout);
 
 
     

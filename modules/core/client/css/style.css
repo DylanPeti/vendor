@@ -36,6 +36,23 @@ ul {
 	list-style: none;
 }
 
+.btn-logout{
+	color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+	display: block;
+    margin: 20px auto 0 auto;
+    width: 200px;  
+    height: 45px;
+	color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    display: block;
+    box-shadow: none;
+    border: none;
+    border-radius: 3px;
+}
+
 
 .helper {
   color: #989898;
@@ -220,7 +237,19 @@ section#signin {
 	height: 50px;
 }
 
+.welcome {
+	background-color: #fcfcfc;
+    border: 1px solid #eee;
+    margin: 100px auto 0 auto;
+    width: 100%;
+    padding: 20px 20px 40px 20px;
+    border-radius: 5px;
+    max-width: 555px;
+}
 
+.welcome h1 {
+	text-align: center;
 
+}
 
 

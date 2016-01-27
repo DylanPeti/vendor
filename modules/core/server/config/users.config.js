@@ -6,6 +6,7 @@
 
 var passport = require('passport');
 var path = require('path');
+var _ = require('lodash');
 
 var LocalStrategy = require('passport-local').Strategy;
 var User = require(path.resolve('./config/models/mongoose.js'));
@@ -62,5 +63,6 @@ module.exports = function(app, db) {
 	app.use(passport.initialize());
 	app.use(passport.session());
 };
+
 
 

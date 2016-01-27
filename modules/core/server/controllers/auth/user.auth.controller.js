@@ -4,7 +4,6 @@
  * Module dependencies.
  */
 var path = require('path');
-var	errorHandler = require(path.resolve(__dirname + '/../error.server.controller'));
 var	mongoose = require('mongoose');
 var	passport = require('passport');
 var appDir = path.dirname(require.main.filename);

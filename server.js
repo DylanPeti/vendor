@@ -2,7 +2,7 @@
  * Mo modules
  */
 
-
+var path = require('path');
 var express        = require('express');
 var express_session = require('express-session');
 var passport        = require('passport');
@@ -42,7 +42,7 @@ app.use(express.static(__dirname + '/modules'));
 app.use(function(req, res, next){
         res.status(404);
         if (req.accepts('html')) {
-         res.render('core/server/views/404', { url: req.url });
+         res.render(path.resolve('modules/index'), { url: '/' });
        return;
        }
          // default to plain-text. send()
