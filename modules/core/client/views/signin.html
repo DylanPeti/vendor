@@ -2,25 +2,14 @@
    
      <section id="signin" controller="AuthenticationController">
 
-     	 	   <div class="product-feature-box">
-                
-                    <div class="product-feature-content">
-    
-     	 	   	     <h4 class="product-feature-title">New in Vend</h4>
-     	 	   	     <img class="product-feature-img" src="">
-     	 	   	     <p class="product-feature-desc">Sync your warehouse and store with vend and unleashed</p>
-     	 	   	    
-     	 	   	    </div>
-
-     	 	   </div>
-     
+     	
    
-     	 	   <div class="signin-box">
+<div class="signin-box">
 <form method="post" class="signin-header" name="loginForm" ng-submit="signin()" novalidate>
     <div class="signin-title"><h1>Sign in</h1></div>
         <div class="signin-locator"> 
      	 	    <h4>Indie home collective</h4>
-     	 	    <span>Not your store?</span>
+     	 	    <span class="visible-sm-block visible-md-block visible-lg-block">Not your store?</span>
      	  </div>
      	 	       		
   <fieldset>
@@ -28,7 +17,7 @@
      <div class="form-group">
 <input type="text" id="email" name="email" class="form-control" ng-model="credentials.email" ng-click="click()" placeholder="Email" required>
 <div ng-messages="loginForm.email.$error">
-  <div class="error" ng-message="required">{{usernameMsg}}</div>
+  <div class="feedback-error" ng-message="required">{{usernameMsg}}</div>
 </div>
       
      </div>
@@ -36,21 +25,38 @@
      <div class="form-group">
      <input type="password" id="password" name="password" class="form-control" ng-model="credentials.password" placeholder="Password" ng-click="click()" required>
      <div ng-messages="loginForm.password.$error">
-  <div class="error" ng-message="required">{{passwordMsg}}</div>
+  <div class="feedback-error" ng-message="required">{{passwordMsg}}</div>
 </div>
     
    </div>
 
-   <div class="has-error" ng-show="guestMsg">{{guestMsg}}</div>
+   <div class="feedback-error" ng-show="guestMsg">{{guestMsg}}</div>
      	 	       		   
     <div class="singin-action">
-     	 <a class="password-forgot" href="#">Forgot your Sign in?</a>
-          <button type="submit" class="btn btn-primary" ng-disabled="loginForm.$invalid">Let Me In Bro</button>
-  </div>
+         <div class="box">
+          <button type="submit" class="primary-btn" ng-disabled="loginForm.$invalid">Sign in</button>
+        </div>
+        <div class="box">
+     	     <a class="password-forgot" href="#">Forgot your Sign in?</a>
+        </div>
+    </div>
 
  </fieldset>
 </form>
 </div>
+
+     <div class="product-feature-box">
+                
+                    <div class="product-feature-content">
+    
+                 <h4 class="product-feature-title">New in Vend</h4>
+                 <img class="product-feature-img" src="">
+                 <p class="product-feature-desc">Sync your warehouse and store with vend and unleashed</p>
+                
+                </div>
+
+           </div>
+
 
 </section>
 
