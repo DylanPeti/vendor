@@ -13,6 +13,7 @@
     "test": "grunt test"
   },
   "dependencies": {
+    "angular-carousel": "^1.0.1",
     "body-parser": "latest",
     "consolidate": "^0.14.0",
     "cookie-parser": "^1.4.1",

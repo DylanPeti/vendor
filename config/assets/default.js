@@ -24,7 +24,8 @@ module.exports = {
 			// tests: ['modules/lib/angular-mocks/angular-mocks.js']
 		},
 		css: [
-			'css/*.css'
+			'css/*.css',
+			'public/libs/angular-carousel/dist/angular-carousel.css'
 		],
 		less: [
 			'modules/*/client/less/*.less'

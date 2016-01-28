@@ -210,6 +210,32 @@ section#signin {
 .welcome h1 {
   text-align: center; }
 
+#slides_control > div {
+  height: 200px; }
+
+img {
+  margin: auto;
+  width: 400px; }
+
+#slides_control {
+  position: absolute;
+  width: 400px;
+  left: 50%;
+  top: 20px;
+  margin-left: -200px; }
+
+.bgimage {
+  text-align: right;
+  color: white;
+  background-size: cover;
+  height: 100%;
+  background-position: center center; }
+
+ul[rn-carousel] {
+  width: 100%;
+  height: 140px;
+  margin: 0 auto; }
+
 /*==========  Desktop First Method  ==========*/
 @media (min-width: 320px) {
   section#signin {
