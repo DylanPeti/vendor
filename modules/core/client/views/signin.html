@@ -7,7 +7,7 @@
 <div class="signin-box">
 <form method="post" class="signin-header" name="loginForm" ng-submit="signin()" novalidate>
     <div class="signin-title"><h1>Sign in</h1></div>
-        <div class="signin-lo`tor"> 
+        <div class="signin-locator"> 
      	 	    <h4>Indie home collective</h4>
      	 	    <span class="visible-sm-block visible-md-block visible-lg-block"><a href="#">Not your store?</a></span>
      	  </div>
@@ -56,18 +56,22 @@
                  <li ng-repeat="image in Images">
 
 
-                   <div ng-click="goToSlide($index)" ng-style="{'background-image': 'url(' + image + ')'}" class="bgimage ng-binding">
-    
+                   <div ng-click="goToSlide($index)" ng-style="{'background-image': 'url(' + image.image + ')'}" class="bgimage ng-binding">
                             </div>
+                   <div class="carousel-caption">
+                      <p class="product-feature-desc">{{image.caption}}</p>
+                   </div>
+
+
                  </li>
               </ul>
 
-
-<div rn-carousel-indicators ng-if="Images.length > 1" slides="Images" rn-carousel-index="carouselIndex" ng-click="goToSlide($index)"></div>
-
+               
          
                 
-                 <p class="product-feature-desc">Sync your warehouse and store with vend and unleashed</p>
+                
+
+                 <div rn-carousel-indicators ng-if="Images.length > 1" slides="Images" rn-carousel-index="carouselIndex" ng-click="goToSlide($index)" class="indicators"></div>
                 
           </div>
 
