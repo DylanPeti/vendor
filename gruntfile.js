@@ -217,16 +217,6 @@ module.exports = function (grunt) {
 
 	// // Lint project files and minify them into two production files.
 	grunt.registerTask('build', ['env:dev', 'lint', 'ngAnnotate', 'uglify', 'cssmin']);
-
-	// // Run the project tests
-	// grunt.registerTask('test', ['env:test', 'mongoose', 'mochaTest', 'karma:unit']);
-
-	// // Run the project in development mode
 	grunt.registerTask('default', ['env:dev', 'lint', 'concurrent:default']);
 
-	// // Run the project in debug mode
-	// grunt.registerTask('debug', ['env:dev', 'lint', 'concurrent:debug']);
-
-	// // Run the project in production mode
-	// grunt.registerTask('prod', ['build', 'env:prod', 'concurrent:default']);
 };

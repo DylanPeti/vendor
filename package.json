@@ -23,6 +23,7 @@
     "grunt": "latest",
     "grunt-cli": "latest",
     "lodash": "latest",
+    "migrate": "^0.2.2",
     "mongodb": "^2.1.4",
     "mongoose": "latest",
     "passport": "^0.3.2",

@@ -5,7 +5,7 @@ $fontMain: proxima-nova,sans-serif;
 body {
 width: 100%;
 height: 100%;
-margin: 0;∂
+margin: 0;
 padding: 0;
 font-family: $fontMain;
 text-rendering: optimizeLegibility;
@@ -33,7 +33,7 @@ p {
 
 a, a:hover {
 color: #589ee1;
-text-decoration: none !important;
+text-decoration: none;
 }
 
 a, .helper {
@@ -137,22 +137,22 @@ background-size: contain;
 
 
 .header ul li .talk {
-background: $vendText url('/img/chat_icon.svg') no-repeat 50% 50%;
+background: $vendText url('/core/client/img/chat_icon.svg') no-repeat 50% 50%;
 }
 
 .header ul li .phone {
-background: $vendText url('/img/phone_icon.svg') no-repeat 50% 50%;
+background: $vendText url('/core/client/img/phone_icon.svg') no-repeat 50% 50%;
 }
 
 .header ul li .language {
-background: $vendText url('/img/flag-nz.svg') no-repeat 50% 50%;
+background: $vendText url('/core/client/img/flag-nz.svg') no-repeat 50% 50%;
 }
 
 .bk-home {
 position: relative;
 width: 100%;
 height: calc(100vh - 40px);
-background: #fff url('/img/bk-home.jpg') no-repeat 50% 50%;
+background: #fff url('/core/client/img/bk-home.jpg') no-repeat 50% 50%;
 background-size: cover;
 }
 
@@ -160,6 +160,8 @@ section#signin {
 top: 100px;
 left: 50%;
 transform: translateX(-50%);
+-webkit-transform: translateX(-50%);
+-ms-transform: translateX(-50%);
 display: block;
     width: 800px;
     height: auto;
@@ -192,7 +194,7 @@ color: #c9c9c9;
 
 width: 100%;
 height: 140px;
-background: #fff url('/img/flag-nz.svg') no-repeat 50% 50%;
+background: #fff url('/core/client/img/flag-nz.svg') no-repeat 50% 50%;
 background-size: cover;
 
 }
@@ -213,7 +215,7 @@ background-color: #fff;
     width: 100%;
 height: 57px;
 display: inline-block;
-background: #fff url(' /img/vend-tag-logo.svg') no-repeat 0% 0%;
+background: #fff url(' /core/client/img/vend-tag-logo.svg') no-repeat 0% 0%;
 }
 .signin-title h1 {
     padding-left: 140px;
@@ -271,14 +273,19 @@ border-radius: 3px;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+  -webkit-transform: translateX(-50%) !important;
+  -ms-transform: translateX(-50%);
   display: block;
   margin: 0 auto;
   text-align: center;
 }
 
 .indicators {
-  position: relative;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
   height: 55px;
+  clear: both;
 }
 
 .welcome {
@@ -323,18 +330,21 @@ img {
 }
 ul[rn-carousel] {
     width: 100%;
-    height: 200px;
+    height: 265px;
     margin: 0 auto
 }
-
+ul[rn-carousel] li {
+  height: 265px;
+}
 .carousel-caption {
-  position: relative !important;
+  position: relative;
   padding-bottom: 30px;
-  text-align: left !important;
-  margin: 0;
+  text-align: left;
+  margin: 10px 0 0 0;
   padding: 0;
-  left: 0 !important;
-  text-shadow: none !important;
+  left: 0;
+  text-shadow: none;
+  float: left
 }
     /*==========  Desktop First Method  ==========*/
 
@@ -418,6 +428,10 @@ ul[rn-carousel] {
          height: 100%;
          float: left;
          padding: 50px 40px;
+       }
+
+       .bk-home {
+        display: block;
        }
 
       

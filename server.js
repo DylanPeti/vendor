@@ -25,13 +25,8 @@ app.use(bodyParser.json());
 
 mongoose.connect('mongodb://localhost/vendor');
 
-// For sessions. A bit overkill
-// app.use(express_session({ secret: 'keyboard cat', resave: true, saveUninitialized: true }));
-
 //Set up passport auth localstrategy
 require('./modules/core/server/config/users.config.js')(app);
-
-
 
 //Routes 
 require('./modules/core/server/routes/core.server.routes')(app); 
@@ -50,21 +45,19 @@ app.use(function(req, res, next){
 });
 
 
-
-
 // Use swig as the templating engine
 
 app.engine('html', swig.renderFile);
 app.set('view engine', 'html');
 app.set('views', __dirname + '/modules');
 
-//cache in production
+// Cache for production
 app.set('view cache', false);
 swig.setDefaults({ cache: false });
 
 
 app.listen(port);	
-console.log('Hot fire!!' + port); 		
+console.log('Dylan Peti is Hot fire!!' + port); 		
 exports = module.exports = app; 						
 
 
