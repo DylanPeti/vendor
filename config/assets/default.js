@@ -4,24 +4,23 @@ module.exports = {
 	client: {
 		lib: {
 			css: [
-				'modules/lib/fontawesome/css/font-awesome.css',
-				'modules/lib/sweetalert/dist/sweetalert.css'
+
 			],
 			js: [
-				'modules/lib/angular/angular.js',
-				'modules/lib/angular-resource/angular-resource.js',
-				'modules/lib/angular-animate/angular-animate.js',
-				'modules/lib/angular-ui-router/release/angular-ui-router.js',
-				'modules/lib/angular-ui-utils/ui-utils.js',
-				'modules/lib/angular-bootstrap/ui-bootstrap-tpls.js',
-				'modules/lib/angular-file-upload/angular-file-upload.js',
-				'modules/lib/jquery/dist/jquery.js',
-				'modules/lib/moment/min/moment.min.js',
-				'modules/lib/moment-timezone/moment-timezone.js',
-				'modules/ext/bro-uploader.js',
-				'modules/lib/sweetalert/dist/sweetalert.min.js'
+				'public/lib/angular/angular.js',
+				'public/lib/angular-resource/angular-resource.js',
+				'public/lib/angular-animate/angular-animate.js',
+				'public/lib/angular-ui-router/release/angular-ui-router.js',
+				'public/lib/angular-ui-utils/ui-utils.js',
+				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
+				'public/lib/angular-file-upload/angular-file-upload.js',
+				'public/lib/jquery/dist/jquery.js',
+				'public/lib/moment/min/moment.min.js',
+				'public/lib/moment-timezone/moment-timezone.js',
+				'public/ext/bro-uploader.js',
+				'public/lib/sweetalert/dist/sweetalert.min.js'
 			],
-			// tests: ['modules/lib/angular-mocks/angular-mocks.js']
+
 		},
 		css: [
 			'css/*.css',

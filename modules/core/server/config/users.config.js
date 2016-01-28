@@ -34,9 +34,8 @@ module.exports = function(app, db) {
 			passwordField: 'password'
 		},
 		function(email, password, done) {
-            console.log('Hey! no more 400 error!');
-       
-       //find the user
+         
+       // Find the User
 			User.findOne({
 				email: email
 			}, function(err, user) {

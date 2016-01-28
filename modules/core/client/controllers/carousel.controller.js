@@ -1,13 +1,7 @@
 'use strict';
 
-angular.module('vendor').controller('BodyController', ['$scope', '$location', 'Authentication',
-	function($scope, $location, Authentication) {
-
-		$scope.authentication = Authentication;
-		
-		//If the user is not
-		if (!$scope.authentication.user) $location.path('/authentication/signin');
-		$scope.welcome = "welcome";
+angular.module('vendor').controller('CarouselController', ['$scope',
+	function($scope) {
 
 		// Caraousel properties
 

@@ -10,6 +10,7 @@ exports.renderIndex = function(req, res) {
 /**
  * Render the server error page
  */
+
 exports.renderServerError = function(req, res) {
 	res.status(500).render('core/server/views/404', {
 		error: 'Oops! Something went wrong...'

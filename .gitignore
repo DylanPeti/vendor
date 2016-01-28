@@ -64,6 +64,7 @@ tests/results/**
 modules/public/
 modules/views/
 /public/build/
+/public
 /packages/contrib/
 /packages/**/**/public/assets/lib
 packages/custom/mail-templates/server/templates/example/style.css

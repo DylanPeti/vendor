@@ -1,12 +1,13 @@
 $vendColor: #41af4b;
 $vendText: #404040;
+$fontMain: proxima-nova,sans-serif;
 
 body {
 width: 100%;
 height: 100%;
-margin: 0;
+margin: 0;∂
 padding: 0;
-font-family: proxima-nova,sans-serif !important;
+font-family: $fontMain;
 text-rendering: optimizeLegibility;
 -webkit-font-smoothing: antialiased;
 }
@@ -66,7 +67,7 @@ color: #fff;
 }
 
 .primary-btn {
-    background-color: #41af4b;
+    background-color: $vendColor;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -101,7 +102,7 @@ input[type="text"], input[type="password"] {
 position: relative;
 width: 100%;
 height: 40px;
-background-color: #404040;
+background-color: $vendText;
 color: #c9c9c9;
 }
 
@@ -136,15 +137,15 @@ background-size: contain;
 
 
 .header ul li .talk {
-background: #404040 url('/img/chat_icon.svg') no-repeat 50% 50%;
+background: $vendText url('/img/chat_icon.svg') no-repeat 50% 50%;
 }
 
 .header ul li .phone {
-background: #404040 url('/img/phone_icon.svg') no-repeat 50% 50%;
+background: $vendText url('/img/phone_icon.svg') no-repeat 50% 50%;
 }
 
 .header ul li .language {
-background: #404040 url('/img/flag-nz.svg') no-repeat 50% 50%;
+background: $vendText url('/img/flag-nz.svg') no-repeat 50% 50%;
 }
 
 .bk-home {
@@ -162,7 +163,7 @@ transform: translateX(-50%);
 display: block;
     width: 800px;
     height: auto;
-    background-color: #404040;
+    background-color: $vendText;
 }
 
 .product-feature-content {
@@ -177,7 +178,7 @@ height: 100%;
 min-height: 422px;
 float: left;
 padding: 50px 40px;
-background-color: #404040;
+background-color: $vendText;
 color: #c9c9c9;
 }
 
@@ -380,9 +381,7 @@ ul[rn-carousel] {
 
      @media (min-width: 768px) {
 
-     	.header {
-     		// display: block;
-     	}
+
 
      	section#signin {
      		position: absolute;
@@ -427,145 +426,8 @@ ul[rn-carousel] {
 
 
 
-    // .signin-title {
-    // width: 100%;
-    // height: 60px;
-    // padding: 0 10px;
-    // display: inline-block;
-    // background: #fff url(" /img/vend-tag-logo.svg") no-repeat 25px 0%;
-    // } 
-
-    // .signin-title h1 {
-    // float: right;
-    // position: relative;
-    // line-height: 60px;
-    // text-transform: capitalize;
-    // margin: 0;
-    // right: 23px;
-    // font-size: 38px;
-    // font-weight: 200;
-    // }
-
-    // .signin-locator {
-    // 	height: 100px;
-    // }
-
-    // .signin-locator span {
-    // 	display: none;
-    // }
-
-    // .header{
-    // 	display: none;
-    // }
-
-    // section#signin {
-    // 	position: relative;
-    // 	top: 0;
-    // 	width: 100%;
-    // }
-
-    // .box {
-    // 	float: left;
-    // 	width: 100%;
-    // }
-    // .singin-action a {
-    // display: block;
-    // width: 100%;
-    // padding-top: 15px;
-    // line-height: 50px;
-    // text-align: center;
-    // }
-    
-    // .primary-btn {
-    // width: 100%;
-    // display: block;
-    // margin: 0 auto;
-    // float: none;
-    // border-radius: 3px;
-    // font-size: 14px;
-    // }
-
-    // .product-feature-box {
-    // display: block;
-    // width: 100%;
-    // height: 100%;
-    // clear: both;
-    // padding: 50px 40px;
-    // background-color: #404040;
-    // color: #c9c9c9;
-
-    // }
-
-    // .signin-box {
-    // padding: 50px 40px;
-    // clear: both;
-    // width: 100%;
-    // background: #fff;
-    //  }
-
     
 
 
    
 
-
-
-    /*==========  Mobile First Method  ==========*/
-
-    /* Custom, iPhone Retina */ 
-    @media only screen and (min-width : 320px) {
-        
-    }
-
-    /* Extra Small Devices, Phones */ 
-    @media only screen and (min-width : 480px) {
-
-    }
-
-    /* Small Devices, Tablets */
-    @media only screen and (min-width : 768px) {
-
-    }
-
-    /* Medium Devices, Desktops */
-    @media only screen and (min-width : 992px) {
-
-    }
-
-    /* Large Devices, Wide Screens */
-    @media only screen and (min-width : 1200px) {
-
-    }
-
-
-
-    /*==========  Non-Mobile First Method  ==========*/
-
-    /* Large Devices, Wide Screens */
-    @media only screen and (max-width : 1200px) {
-
-    }
-
-    /* Medium Devices, Desktops */
-    @media only screen and (max-width : 992px) {
-
-    }
-
-    /* Small Devices, Tablets */
-    @media only screen and (max-width : 768px) {
-
-    }
-
-    /* Extra Small Devices, Phones */ 
-    @media only screen and (max-width : 480px) {
-
-    }
-
-    /* Custom, iPhone Retina */ 
-    @media only screen and (max-width : 320px) {
-
-    	.bk-home{
-    		display: none
-    	}
-        
-    }
