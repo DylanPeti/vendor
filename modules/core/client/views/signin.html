@@ -17,7 +17,6 @@
      <div class="form-group">
 <input type="text" id="email" name="email" class="form-control" ng-model="credentials.email" ng-click="click()" placeholder="Email" required>
 <div ng-messages="loginForm.email.$error">
-  <div class="feedback-error" ng-message="required">{{usernameMsg}}</div>
 </div>
       
      </div>
@@ -25,12 +24,14 @@
      <div class="form-group">
      <input type="password" id="password" name="password" class="form-control" ng-model="credentials.password" placeholder="Password" ng-click="click()" required>
      <div ng-messages="loginForm.password.$error">
-  <div class="feedback-error" ng-message="required">{{passwordMsg}}</div>
 </div>
     
    </div>
 
-   <div class="feedback-error" ng-show="guestMsg">{{guestMsg}}</div>
+<!--    <div class="feedback-error" ng-show="guestMsg">{{guestMsg}}</div> -->
+    <div ng-show="error" class="text-center text-danger">
+                    <div ng-bind="error" class="feedback-error"></div>
+                  </div>
      	 	       		   
     <div class="singin-action">
          <div class="box">

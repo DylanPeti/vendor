@@ -44,7 +44,7 @@ module.exports = function(app, db) {
 				}
 				if (!user) {
 					return done(null, false, {
-						message: 'Unknown email'
+						message: 'That user doesn\'t exist'
 					});
 				}
 				if (!user.authenticate(password)) {
