@@ -60,7 +60,7 @@ ul {
   text-align: center;
   color: #d92929; }
 
-input[type="text"], input[type="password"] {
+input[type="text"], input[type="password"], input[type="name"], input[type="email"] {
   color: #404040;
   border: 2px solid #f5f4f4;
   border-radius: 0;
@@ -125,6 +125,20 @@ section#signin {
   height: auto;
   background-color: #404040; }
 
+section#signup {
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  display: block;
+  width: 800px;
+  height: auto;
+  background-color: #404040; }
+
+#registered-user {
+  margin-top: 15px; }
+
 .product-feature-content {
   width: 100%;
   height: auto;
@@ -158,6 +172,12 @@ section#signin {
   padding: 50px 40px;
   float: right;
   width: 66.6%;
+  background-color: #fff; }
+
+.signup-box {
+  padding: 50px 40px;
+  float: none;
+  width: 100%;
   background-color: #fff; }
 
 .signin-title {
@@ -197,7 +217,14 @@ section#signin {
   float: left;
   line-height: 50px; }
 
-.singin-action .primary-btn {
+.signup-action {
+  margin-top: 15px; }
+
+.singup-action a {
+  float: none;
+  line-height: 50px; }
+
+.primary-btn {
   height: 50px;
   border-radius: 3px; }
 
@@ -226,11 +253,13 @@ section#signin {
 .welcome {
   background-color: #fcfcfc;
   border: 1px solid #eee;
-  margin: 100px auto 0 auto;
+  margin: 0 auto;
   width: 100%;
+  position: relative;
   padding: 20px 20px 40px 20px;
   border-radius: 5px;
-  max-width: 555px; }
+  max-width: 555px;
+  top: 100px; }
 
 .welcome h1 {
   text-align: center; }
@@ -277,7 +306,7 @@ ul[rn-carousel] li {
 
 /*==========  Desktop First Method  ==========*/
 @media (min-width: 320px) {
-  section#signin {
+  section#signin, section#signup {
     position: relative;
     top: 0;
     left: 0;
@@ -292,7 +321,7 @@ ul[rn-carousel] li {
   .product-feature-box {
     height: auto; }
 
-  .singin-action .primary-btn {
+  .primary-btn {
     width: 100%; }
 
   .singin-action a {
@@ -309,12 +338,19 @@ ul[rn-carousel] li {
     transform: translateX(-50%);
     top: 100px; }
 
+  section#signup {
+    position: absolute;
+    left: 50%;
+    width: 550px;
+    transform: translateX(-50%);
+    top: 100px; }
+
   .signin-box {
     float: right;
     width: 66.6%;
     background-color: #fff; }
 
-  .singin-action .primary-btn {
+  .primary-btn {
     width: 200px;
     float: right; }
 

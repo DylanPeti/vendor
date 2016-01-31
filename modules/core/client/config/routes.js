@@ -13,6 +13,10 @@ angular.module('vendor').config(['$routeProvider', '$locationProvider', function
 			templateUrl: '/core/client/views/welcome.html',
 			controller: 'BodyController'
      })
+		.when('/signup', {
+			templateUrl: '/core/client/views/signup.html',
+			controller: 'AuthenticationController'
+     })
 
 	$locationProvider.html5Mode(true);
 

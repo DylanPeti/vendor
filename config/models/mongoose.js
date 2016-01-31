@@ -68,6 +68,9 @@ userSchema.pre('save', function(next) {
   next();
 });
 
+
+
+
 /**
  * Create instance method for hashing a password
  */
@@ -83,6 +86,8 @@ userSchema.methods.hashPassword = function(password) {
 userSchema.methods.authenticate = function(password) {
   return this.password === this.hashPassword(password);
 };
+
+
 
 
 var User = mongoose.model('User', userSchema);

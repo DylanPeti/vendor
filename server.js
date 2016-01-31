@@ -3,6 +3,7 @@
  */
 
 var path = require('path');
+var migrate = require('migrate');
 var express        = require('express');
 var express_session = require('express-session');
 var passport        = require('passport');
@@ -44,6 +45,28 @@ app.use(function(req, res, next){
         res.type('txt').send('Not found');
 });
 
+
+// var newUser = User({
+//   name: 'james',
+//   email: 'lemon@gomomentum.marketing',
+//   password: 'triumph',
+//   provider: 'local'
+// });
+
+// newUser.save(function(err) {
+//   if (err) throw err;
+//   console.log('User created!');
+// });
+// 
+// 
+
+// var set = migrate.load('./config/migrations/.migrate', './config/migrations');
+ 
+// set.up(function (err) {
+//   if (err) throw err;
+ 
+//   console.log('Migration completed');
+// });
 
 // Use swig as the templating engine
 
