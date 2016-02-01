@@ -49,22 +49,6 @@
     "grunt-contrib-sass": "latest",
     "grunt-contrib-less": "latest",
     "load-grunt-tasks": "latest",
-    "gulp": "latest",
-    "gulp-coffee": "latest",
-    "gulp-concat": "latest",
-    "gulp-csslint": "latest",
-    "gulp-cssmin": "latest",
-    "gulp-install": "^0.6.0",
-    "gulp-jshint": "latest",
-    "gulp-less": "latest",
-    "gulp-livereload": "latest",
-    "gulp-load-plugins": "latest",
-    "gulp-mocha": "latest",
-    "gulp-nodemon": "latest",
-    "gulp-rename": "latest",
-    "gulp-sass": "latest",
-    "gulp-uglify": "latest",
-    "gulp-util": "latest",
     "run-sequence": "latest"
   }
 }
