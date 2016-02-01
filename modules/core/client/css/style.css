@@ -21,6 +21,16 @@ a, a:hover {
 ul {
   list-style: none; }
 
+.feedback-error {
+  padding: 8px;
+  border-radius: 2px;
+  border: 1px solid red;
+  background: #fbeaea;
+  border: 1px solid #d92929;
+  width: 100%;
+  text-align: center;
+  color: #d92929; }
+
 .toolbar-right-icons svg {
   width: 18px;
   height: 18px;
@@ -264,6 +274,9 @@ input[type="text"], input[type="password"], input[type="name"], input[type="emai
     width: 800px;
     transform: translateX(-50%);
     top: 100px; }
+
+  .center.signin-page {
+    background-color: #404040; }
 
   .entry-panel {
     float: right;

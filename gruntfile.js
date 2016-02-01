@@ -106,7 +106,7 @@ module.exports = function (grunt) {
 		ngAnnotate: {
 			production: {
 				files: {
-					'public/dist/application.js': defaultAssets.client.js
+					'': defaultAssets.client.js
 				}
 			}
 		},
@@ -116,14 +116,14 @@ module.exports = function (grunt) {
 					mangle: false
 				},
 				files: {
-					'public/dist/application.min.js': 'public/dist/application.js'
+					'': ''
 				}
 			}
 		},
 		cssmin: {
 			combine: {
 				files: {
-					'public/dist/application.min.css': defaultAssets.client.css
+					'': defaultAssets.client.css
 				}
 			}
 		},
@@ -165,29 +165,6 @@ module.exports = function (grunt) {
 				}
 			}
 		},
-		// mochaTest: {
-		// 	src: testAssets.tests.server,
-		// 	options: {
-		// 		reporter: 'spec'
-		// 	}
-		// },
-		karma: {
-			unit: {
-				configFile: 'karma.conf.js'
-			}
-		},
-		protractor: {
-			options: {
-				configFile: 'protractor.conf.js',
-				keepAlive: true,
-				noColor: false
-			},
-			e2e: {
-				options: {
-					args: {} // Target-specific arguments
-				}
-			}
-		}
 	});
 
 	// Load NPM tasks 

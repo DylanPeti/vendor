@@ -63,6 +63,10 @@
     top: 100px;
   }
 
+  .center.signin-page {
+    background-color: $vendText;
+  }
+
   .entry-panel {
     float: right;
     width: 66.6%;
@@ -94,7 +98,7 @@
   }
 
   .carousel-panel .carousel-image {
-     height: 140px;
+    height: 140px;
   }
 
   .carousel-panel ul[rn-carousel], .carousel-panel ul[rn-carousel] li {

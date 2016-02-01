@@ -5,7 +5,6 @@ $vendLightGray: #c9c9c9;
 $vendText: #404040;
 $fontMain: "proxima-nova", sans-serif;
 
-
 @mixin background($url, $size) {
   background: $vendText url($url) no-repeat 50% 50%;
   background-size: $size;
@@ -37,6 +36,17 @@ a, a:hover {
 
 ul {
   list-style: none;
+}
+
+.feedback-error {
+  padding: 8px;
+  border-radius: 2px;
+  border: 1px solid red;
+  background: #fbeaea;
+  border: 1px solid #d92929;
+  width: 100%;
+  text-align: center;
+  color: #d92929;
 }
 
 .toolbar-right-icons svg {
@@ -106,6 +116,7 @@ input[type="text"], input[type="password"], input[type="name"], input[type="emai
 .toolbar-right-icons {
   float: right;
 }
+
 .toolbar-right-icons.svg {
   margin-top: 12px;
 }
@@ -186,7 +197,7 @@ input[type="text"], input[type="password"], input[type="name"], input[type="emai
     margin: 0;
   }
 
-   .form-locator a span {
+  .form-locator a span {
     color: $vendLightGray;
   }
 
@@ -210,7 +221,6 @@ input[type="text"], input[type="password"], input[type="name"], input[type="emai
   background-color: $vendText;
   color: #c9c9c9;
 
-
   .carousel-title {
     height: 57px;
     margin-top: 0;
@@ -220,9 +230,7 @@ input[type="text"], input[type="password"], input[type="name"], input[type="emai
     float: left;
   }
 
-  .carousel-inner span {
-
-  }
+  .carousel-inner span {}
 
   .carousel-image {
     text-align: right;
@@ -262,18 +270,15 @@ input[type="text"], input[type="password"], input[type="name"], input[type="emai
   .arrow-box {
     margin: 0 0 0 5px;
 
-   svg {
-    width: 10px;
-    height: 10px;
-   }
-  
-  .arrowbox  {
-    fill: $vendLightGray;
-  }
+    svg {
+      width: 10px;
+      height: 10px;
+    }
 
+    .arrowbox {
+      fill: $vendLightGray;
+    }
   }
-
- 
 
   .rn-carousel-indicator span {
     font-size: 24px;
@@ -296,7 +301,6 @@ input[type="text"], input[type="password"], input[type="name"], input[type="emai
     width: 100%;
     margin: 0 auto;
   }
-
 }
 
 #page h1 {
