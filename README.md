@@ -1,3 +1,4 @@
+## Welcome to Vendor
 Vendor is a full-stack Javascript demonstration application for the Vend recruitment process. 
 The set of tools used for developing this app, is typically called a MEAN stack. To run the app, you must require
 the stacks dependencies: [MongoDB](http://www.mongodb.org/), [Node.js](http://www.nodejs.org/), [Express](http://expressjs.com/), and [AngularJS](http://angularjs.org/)
@@ -31,6 +32,25 @@ which is currently v4.2.4
 ```
 $ npm install -g nvm
 ```
+
+## Vendor Technologies
+
+**About**
+I chose to use these technologies because of its simplicity as a software bundle. I was also looking for something I could utilise that would build on my knowledge of front-end technologies. I have some expereince in this area and this was a great oppurtunity to extend on my own toolbelt. I had some issues setting up authentication but resolved this by parsing json passport middleware. 
+
+**Technologies**
+* MongoDB, Node.js, Express and AngularJS
+* Grunt, npm, SCSS, swig, sweetalert, bootstrap
+
+**Passport**
+Vendor utilises [passport](http://passportjs.org/) - simple authentication middleware. The app uses auth endpoints to handle its local strategy. On sign in, Passport will then invoke our configuration, passes the email and password to its verification method and checks for matching credentials in the database. AngularJS will either redirect a successful user to the welcome page or attach the error properties to the scope which will be available to the form via the ng-bind directive as validation feedback. 
+
+The signup page works in similar fashion. 
+
+
+
+
+
 
 
 
