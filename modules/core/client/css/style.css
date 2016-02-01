@@ -3,7 +3,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: proxima-nova, sans-serif;
+  font-family: "proxima-nova", sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased; }
 
@@ -21,25 +21,6 @@ a, a:hover {
 ul {
   list-style: none; }
 
-.btn-logout {
-  color: #fff;
-  background-color: #d9534f;
-  border-color: #d43f3a;
-  display: block;
-  margin: 20px auto 0 auto;
-  width: 200px;
-  height: 45px;
-  color: #fff;
-  background-color: #d9534f;
-  border-color: #d43f3a;
-  display: block;
-  box-shadow: none;
-  border: none;
-  border-radius: 3px; }
-
-.helper {
-  color: #989898; }
-
 .primary-btn {
   background-color: #41af4b;
   color: #fff;
@@ -50,15 +31,19 @@ ul {
   letter-spacing: 1px;
   transition: color .2s, background-color .2s, border-color .2s; }
 
-.feedback-error {
-  padding: 8px;
-  border-radius: 2px;
-  border: 1px solid red;
-  background: #fbeaea;
-  border: 1px solid #d92929;
-  width: 100%;
-  text-align: center;
-  color: #d92929; }
+.btn-logout {
+  background-color: #d9534f;
+  display: block;
+  margin: 20px auto 0 auto;
+  width: 200px;
+  height: 45px;
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+  display: block;
+  box-shadow: none;
+  border-radius: 3px;
+  border: none; }
 
 input[type="text"], input[type="password"], input[type="name"], input[type="email"] {
   color: #404040;
@@ -99,52 +84,78 @@ input[type="text"], input[type="password"], input[type="name"], input[type="emai
   background-size: contain; }
 
 .header ul li .talk {
-  background: #404040 url("/core/client/img/chat_icon.svg") no-repeat 50% 50%; }
+  background: #404040 url("/core/client/img/chat_icon.svg") no-repeat 50% 50%;
+  background-size: auto; }
 
 .header ul li .phone {
-  background: #404040 url("/core/client/img/phone_icon.svg") no-repeat 50% 50%; }
+  background: #404040 url("/core/client/img/phone_icon.svg") no-repeat 50% 50%;
+  background-size: auto; }
 
 .header ul li .language {
-  background: #404040 url("/core/client/img/flag-nz.svg") no-repeat 50% 50%; }
+  background: #404040 url("/core/client/img/flag-nz.svg") no-repeat 50% 50%;
+  background-size: auto; }
 
 .bk-home {
+  background: #404040 url("/core/client/img/bk-home.jpg") no-repeat 50% 50%;
+  background-size: cover;
   position: relative;
   width: 100%;
-  height: calc(100vh - 40px);
-  background: #fff url("/core/client/img/bk-home.jpg") no-repeat 50% 50%;
-  background-size: cover; }
+  height: calc(100vh - 40px); }
 
-section#signin {
+/** entry panel nesting */
+.center {
   top: 100px;
   left: 50%;
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   display: block;
-  width: 800px;
   height: auto;
-  background-color: #404040; }
+  background-color: transparent; }
 
-section#signup {
-  top: 100px;
-  left: 50%;
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  display: block;
-  width: 800px;
-  height: auto;
-  background-color: #404040; }
-
-#registered-user {
+#signup-panel form {
   margin-top: 15px; }
 
-.product-feature-content {
-  width: 100%;
-  height: auto;
-  margin: 0 auto; }
+#signin-panel .actions a {
+  line-height: 50px; }
 
-.product-feature-box {
+.entry-panel {
+  margin: 0;
+  padding: 50px 40px;
+  border: none;
+  border-radius: none;
+  float: right;
+  width: 66.6%;
+  background-color: #fff; }
+  .entry-panel fieldset {
+    clear: both; }
+  .entry-panel .form-title {
+    width: 100%;
+    height: 57px;
+    display: inline-block;
+    background: #fff url(" /core/client/img/vend-tag-logo.svg") no-repeat 0% 0%; }
+  .entry-panel .form-title h1 {
+    padding-left: 140px;
+    line-height: 57px;
+    text-transform: capitalize;
+    margin: 0;
+    font-weight: 200; }
+  .entry-panel .form-locator h4 {
+    padding: 50px 0 25px 0;
+    float: left;
+    margin: 0; }
+  .entry-panel .form-locator span {
+    color: #d0d0d0;
+    float: right;
+    padding: 50px 0 25px 0;
+    text-align: right;
+    margin: 0; }
+  .entry-panel .actions {
+    width: 100%;
+    margin-top: 10px;
+    float: left; }
+
+.carousel-panel {
   width: calc(99.9%/3);
   height: 100%;
   min-height: 422px;
@@ -152,73 +163,66 @@ section#signup {
   padding: 50px 40px;
   background-color: #404040;
   color: #c9c9c9; }
-
-.product-feature-title {
-  width: 100%;
-  height: 57px;
-  margin-top: 0; }
-
-.product-feature-img {
-  width: 100%;
-  height: 140px;
-  background: #fff url("/core/client/img/flag-nz.svg") no-repeat 50% 50%;
-  background-size: cover; }
-
-.product-feature-desc {
-  margin-top: 20px;
-  font-weight: 600; }
-
-.signin-box {
-  padding: 50px 40px;
-  float: right;
-  width: 66.6%;
-  background-color: #fff; }
+  .carousel-panel .carousel-content {
+    width: 100%;
+    height: auto;
+    margin: 0 auto; }
+  .carousel-panel .carousel-title {
+    width: 100%;
+    height: 57px;
+    margin-top: 0; }
+  .carousel-panel .carousel-image {
+    text-align: right;
+    color: white;
+    background-size: cover;
+    height: 100%;
+    max-height: 140px;
+    background-position: center center; }
+  .carousel-panel .carousel-caption {
+    position: relative;
+    padding-bottom: 30px;
+    text-align: left;
+    margin: 10px 0 0 0;
+    padding: 0;
+    left: 0;
+    text-shadow: none;
+    float: left; }
+  .carousel-panel .carousel-description {
+    margin-top: 20px;
+    font-weight: 600; }
+  .carousel-panel .carousel-indicators {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    height: 55px;
+    clear: both; }
+  .carousel-panel .carousel-indicators .active {
+    background-color: transparent; }
+  .carousel-panel .rn-carousel-indicator span {
+    font-size: 24px;
+    padding: 0 5px; }
+  .carousel-panel .rn-carousel-indicator {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%) !important;
+    -ms-transform: translateX(-50%);
+    display: block;
+    margin: 0 auto;
+    text-align: center; }
+  .carousel-panel ul[rn-carousel] {
+    width: 100%;
+    height: 265px;
+    margin: 0 auto; }
+  .carousel-panel ul[rn-carousel] li {
+    height: 265px; }
 
 .signup-box {
   padding: 50px 40px;
   float: none;
   width: 100%;
   background-color: #fff; }
-
-.signin-title {
-  width: 100%;
-  height: 57px;
-  display: inline-block;
-  background: #fff url(" /core/client/img/vend-tag-logo.svg") no-repeat 0% 0%; }
-
-.signin-title h1 {
-  padding-left: 140px;
-  line-height: 57px;
-  text-transform: capitalize;
-  margin: 0;
-  font-weight: 200; }
-
-.signin-locator h4 {
-  padding: 50px 0 25px 0;
-  float: left;
-  margin: 0; }
-
-.signin-locator span {
-  color: #d0d0d0;
-  float: right;
-  padding: 50px 0 25px 0;
-  text-align: right;
-  margin: 0; }
-
-.signin-box fieldset {
-  clear: both; }
-
-.singin-action {
-  width: 100%;
-  float: left;
-  margin-top: 10px; }
-
-.singin-action a {
-  float: left;
-  line-height: 50px; }
-
-.signup-action {
-  margin-top: 15px; }
 
 .singup-action a {
   float: none;
@@ -227,28 +231,6 @@ section#signup {
 .primary-btn {
   height: 50px;
   border-radius: 3px; }
-
-.rn-carousel-indicator span {
-  font-size: 24px;
-  padding: 0 5px; }
-
-.rn-carousel-indicator {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%) !important;
-  -ms-transform: translateX(-50%);
-  display: block;
-  margin: 0 auto;
-  text-align: center; }
-
-.indicators {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  height: 55px;
-  clear: both; }
 
 .welcome {
   background-color: #fcfcfc;
@@ -278,35 +260,9 @@ img {
   top: 20px;
   margin-left: -200px; }
 
-.bgimage {
-  text-align: right;
-  color: white;
-  background-size: cover;
-  height: 100%;
-  max-height: 140px;
-  background-position: center center; }
-
-ul[rn-carousel] {
-  width: 100%;
-  height: 265px;
-  margin: 0 auto; }
-
-ul[rn-carousel] li {
-  height: 265px; }
-
-.carousel-caption {
-  position: relative;
-  padding-bottom: 30px;
-  text-align: left;
-  margin: 10px 0 0 0;
-  padding: 0;
-  left: 0;
-  text-shadow: none;
-  float: left; }
-
 /*==========  Desktop First Method  ==========*/
 @media (min-width: 320px) {
-  section#signin, section#signup {
+  .center, section#signup {
     position: relative;
     top: 0;
     left: 0;
@@ -314,24 +270,17 @@ ul[rn-carousel] li {
     float: none;
     transform: none; }
 
-  .signin-box, .product-feature-box {
+  .entry-panel, .carousel-panel {
     float: none;
     width: 100%; }
 
-  .product-feature-box {
+  .carousel-panel {
     height: auto; }
 
   .primary-btn {
-    width: 100%; }
-
-  .singin-action a {
-    float: none;
-    display: block;
-    text-align: center;
-    width: 100%;
-    padding-top: 15px; } }
+    width: 100%; } }
 @media (min-width: 768px) {
-  section#signin {
+  .center {
     position: absolute;
     left: 50%;
     width: 800px;
@@ -345,23 +294,20 @@ ul[rn-carousel] li {
     transform: translateX(-50%);
     top: 100px; }
 
-  .signin-box {
+  .entry-panel {
     float: right;
     width: 66.6%;
     background-color: #fff; }
+
+  #signup-panel.entry-panel {
+    float: none;
+    margin: 0 auto; }
 
   .primary-btn {
     width: 200px;
     float: right; }
 
-  .singin-action a {
-    float: left;
-    display: inline;
-    text-align: left;
-    width: auto;
-    padding: 0; }
-
-  .product-feature-box {
+  .carousel-panel {
     width: calc(99.9%/3);
     height: 100%;
     float: left;

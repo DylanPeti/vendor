@@ -14,6 +14,7 @@ module.exports = function(app) {
 	app.route('/').get(core.renderIndex);
 	app.route('/welcome').get(core.renderIndex);
 	app.route('/signup').get(core.renderIndex);
+	app.route('/signin').get(core.renderIndex);
 
    // Define User routes
 	app.route('/api/auth/signin').post(user.signin);

@@ -5,7 +5,7 @@ angular.module('vendor').config(['$routeProvider', '$locationProvider', function
    $routeProvider.otherwise('/');
 	$routeProvider
 		.when('/', {
-			templateUrl: '/core/client/views/signin.html',
+			templateUrl: '/core/client/views/signup.html',
 			controller: 'AuthenticationController'
 		})
 
@@ -21,6 +21,16 @@ angular.module('vendor').config(['$routeProvider', '$locationProvider', function
 			templateUrl: '/core/client/views/signup.html',
 			controller: 'AuthenticationController'
      })
+		.when('/signup', {
+			templateUrl: '/core/client/views/signup.html',
+			controller: 'AuthenticationController'
+     })
+		// .when('/api/auth/signout', {
+		// 	templateUrl: '/core/client/views/signup.html',
+		// 	controller: 'AuthenticationController'
+  //    })
+	
+
 
 	$locationProvider.html5Mode(true);
 

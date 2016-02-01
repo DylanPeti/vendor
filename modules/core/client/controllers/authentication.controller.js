@@ -4,23 +4,28 @@ angular.module('vendor').controller('AuthenticationController', ['$scope', '$htt
 	function($scope, $http, $location, Authentication) {
 		
 		$scope.authentication = Authentication;
-		$scope.guestMsg = false;
-		$scope.usernameMsg = "Enter your Email or Username";
-		$scope.passwordMsg = "Please enter your Password";
 
-		$scope.click = function() {
-		   $scope.guestMsg = false;
-		}
+
+        // This needs extracting to a different controller
+        $scope.sweetalert = function() {
+
+        	swal({
+        		title: 'Clicked!',
+        		text: 'This link is for demonstration purposes only!',
+        		type: 'info',
+        		confirmButtonColor: '#41af4b'
+        	});
+        }
 
 		$scope.signup = function() {
 
 			$http.post('/api/auth/signup', $scope.credentials).success(function(response) {
 				
-				// If sucjcessful we assign the response to the global user model
+				// If succcessful assign to user modelg
 				$scope.authentication.user = response;
 
 				
-				// And redirect to the index page
+				// Redirect to the welcome page
 				$location.path('/welcome');
 
 			}).error(function(response) {

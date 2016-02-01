@@ -19,11 +19,8 @@ var User = require(appDir + '/config/models/mongoose');
  * Signup
  */
 exports.signup = function(req, res) {
-	// For security measurement we remove the roles from the req.body object
-	console.log(req.body);
-	delete req.body.roles;
 
-	// Init Variables
+
 	var user = new User(req.body);
 	var message = null;
 
@@ -79,6 +76,6 @@ exports.signin = function(req, res, next) {
  * Signout
  */
 exports.signout = function(req, res) {
-	req.logout();
-	res.redirect('/');
+	 req.logout();
+	 res.redirect('/signin');
 };
