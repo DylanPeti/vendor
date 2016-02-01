@@ -1,4 +1,7 @@
 ## Welcome to Vendor
+
+Check out the [Vendor DEMO](http://162.243.53.205:3000/signin) 
+
 Vendor is a full-stack Javascript demonstration application for the Vend recruitment process. 
 The set of tools used for developing this app, is typically called a MEAN stack. To run the app, you must require
 the stacks dependencies: [MongoDB](http://www.mongodb.org/), [Node.js](http://www.nodejs.org/), [Express](http://expressjs.com/), and [AngularJS](http://angularjs.org/)
