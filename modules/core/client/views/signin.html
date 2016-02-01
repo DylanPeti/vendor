@@ -7,54 +7,70 @@
       <div class="form-locator">
         <h4>Indie home collective</h4>
         <span class="visible-sm-block visible-md-block visible-lg-block"><a ng-click="sweetalert()" href="#">Not your store?</a></span>
-      </div>
-      
-      <fieldset>
-        <div class="form-group">
-          <input type="email" id="email" name="email" class="form-control" ng-model="credentials.email" ng-click="click()" placeholder="Email" required>
-          <div ng-messages="loginForm.email.$error">
-          </div>
+        <a ng-click="sweetalert()" href="#">
+          <span class="glyphicon glyphicon-remove visible-xs-block"></span></a>
         </div>
         
-        <div class="form-group">
-          <input type="password" id="password" name="password" class="form-control" ng-model="credentials.password" placeholder="Password" ng-click="click()" required>
-          <div ng-messages="loginForm.password.$error">
+        <fieldset>
+          <div class="form-group">
+            <input type="email" id="email" name="email" class="form-control" ng-model="credentials.email" ng-click="click()" placeholder="Email" required>
+            <div ng-messages="loginForm.email.$error">
+            </div>
           </div>
           
-        </div>
-        <!-- Display validation errors -->
-        <div ng-show="error" class="text-center text-danger">
-          <div ng-bind="error" class="feedback-error"></div>
-        </div>
-        <div class="actions">
-          <button type="submit" class="button-primary" ng-disabled="loginForm.$invalid">Sign in</button>
-          <a class="password-forgot" ng-click="sweetalert()" href="#">Forgot your Sign in?</a>
-        </div>
-      </fieldset>
-    </form>
-  </div>
-  <!-- Augmented products carousel -->
-  <div class="carousel-panel" ng-controller="CarouselController">
-    
-    <div class="carousel-inner">
-      
-      <h4 class="carousel-title">New in Vend</h4>
-      <ul rn-carousel rn-carousel-auto-slide rn-carousel-index="carouselIndex" class="image">
-        
-        <li ng-repeat="image in Images" active="image.active">
-          <div ng-style="{'background-image': 'url(' + image.image + ')'}" class="carousel-image ng-binding">
+          <div class="form-group">
+            <input type="password" id="password" name="password" class="form-control" ng-model="credentials.password" placeholder="Password" ng-click="click()" required>
+            <div ng-messages="loginForm.password.$error">
+            </div>
+            
           </div>
-          <div class="carousel-caption">
-            <p class="carousel-description">{{image.caption}}</p>
+          <!-- Display validation errors -->
+          <div ng-show="error" class="text-center text-danger">
+            <div ng-bind="error" class="feedback-error"></div>
           </div>
-          
-        </li>
-
-      </ul>
-      <div rn-carousel-indicators ng-if="Images.length > 1" slides="Images" rn-carousel-index="carouselIndex" class="carousel-indicators"></div>
-      
+          <div class="actions">
+            <button type="submit" class="button-primary" ng-disabled="loginForm.$invalid">Sign in</button>
+            <a class="password-forgot" ng-click="sweetalert()" href="#">Forgot your Sign in?</a>
+          </div>
+        </fieldset>
+      </form>
     </div>
-
-
+    <!-- Augmented products carousel -->
+    <div class="carousel-panel" ng-controller="CarouselController">
+      
+      <div class="carousel-inner">
+        
+        <h4 class="carousel-title">New in Vend</h4>
+        <span class="arrow-box">
+          <svg viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+            <title>external-icon</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+              <g id="external-icon" sketch:type="MSLayerGroup" fill="#000000">
+                <g id="Page-1" sketch:type="MSShapeGroup">
+                  <g id="shape">
+                  <path class="arrowbox" d="M8.33333333,8.33333333 L1.66666667,8.33333333 L1.66666667,1.69148437 L3.33333333,1.66666667 L3.33333333,0 L0,0 L0,10 L10,10 L10,5.83333333 L8.33333333,5.83333333 L8.33333333,8.33333333 L8.33333333,8.33333333 Z" id="Path"></path>
+                 <path class="arrowbox" d="M5,0 L6.66666667,1.66666667 L4.16666667,4.16666667 L5.83333333,5.83333333 L8.33333333,3.33333333 L10,5 L10,0 L5,0 L5,0 Z" id="Path"></path>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </span>
+    <ul rn-carousel rn-carousel-auto-slide rn-carousel-index="carouselIndex" class="image">
+      
+      <li ng-repeat="image in Images" active="image.active">
+        <div ng-style="{'background-image': 'url(' + image.image + ')'}" class="carousel-image ng-binding">
+        </div>
+        <div class="carousel-caption">
+          <p class="carousel-description">{{image.caption}}</p>
+        </div>
+        
+      </li>
+    </ul>
+    <div rn-carousel-indicators ng-if="Images.length > 1" slides="Images" rn-carousel-index="carouselIndex" class="carousel-indicators"></div>
+    
   </div>
+</div>
 </div>

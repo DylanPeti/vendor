@@ -21,6 +21,11 @@ a, a:hover {
 ul {
   list-style: none; }
 
+.toolbar-right-icons svg {
+  width: 18px;
+  height: 18px;
+  margin-top: 11px; }
+
 .button-primary {
   background-color: #41af4b; }
 
@@ -73,23 +78,14 @@ input[type="text"], input[type="password"], input[type="name"], input[type="emai
 .toolbar-right-icons {
   float: right; }
 
+.toolbar-right-icons.svg {
+  margin-top: 12px; }
+
 .header ul li .talk, .header ul li .phone, .header ul li .language {
   position: relative;
   width: 20px;
   height: 40px;
   background-size: contain; }
-
-.header ul li .talk {
-  background: #404040 url("/core/client/img/chat_icon.svg") no-repeat 50% 50%;
-  background-size: auto; }
-
-.header ul li .phone {
-  background: #404040 url("/core/client/img/phone_icon.svg") no-repeat 50% 50%;
-  background-size: auto; }
-
-.header ul li .language {
-  background: #404040 url("/core/client/img/flag-nz.svg") no-repeat 50% 50%;
-  background-size: auto; }
 
 .bk-home {
   position: relative;
@@ -139,11 +135,15 @@ input[type="text"], input[type="password"], input[type="name"], input[type="emai
     float: left;
     margin: 0; }
   .entry-panel .form-locator span {
-    color: #d0d0d0;
     float: right;
+    font-weight: 100;
     padding: 50px 0 25px 0;
     text-align: right;
     margin: 0; }
+  .entry-panel .form-locator a span {
+    color: #c9c9c9; }
+  .entry-panel .form-locator span a {
+    color: #626262; }
   .entry-panel .actions {
     width: 100%;
     margin-top: 10px;
@@ -157,20 +157,15 @@ input[type="text"], input[type="password"], input[type="name"], input[type="emai
   padding: 50px 40px;
   background-color: #404040;
   color: #c9c9c9; }
-  .carousel-panel .carousel-content {
-    width: 100%;
-    height: auto;
-    margin: 0 auto; }
   .carousel-panel .carousel-title {
-    width: 100%;
     height: 57px;
     margin-top: 0; }
+  .carousel-panel .carousel-inner h4 {
+    float: left; }
   .carousel-panel .carousel-image {
     text-align: right;
     color: white;
     background-size: cover;
-    height: 100%;
-    max-height: 140px;
     background-position: center center; }
   .carousel-panel .carousel-caption {
     position: relative;
@@ -192,6 +187,13 @@ input[type="text"], input[type="password"], input[type="name"], input[type="emai
     clear: both; }
   .carousel-panel .carousel-indicators .active {
     background-color: transparent; }
+  .carousel-panel .arrow-box {
+    margin: 0 0 0 5px; }
+    .carousel-panel .arrow-box svg {
+      width: 10px;
+      height: 10px; }
+    .carousel-panel .arrow-box .arrowbox {
+      fill: #c9c9c9; }
   .carousel-panel .rn-carousel-indicator span {
     font-size: 24px;
     padding: 0 5px; }
@@ -207,10 +209,7 @@ input[type="text"], input[type="password"], input[type="name"], input[type="emai
     text-align: center; }
   .carousel-panel ul[rn-carousel] {
     width: 100%;
-    height: 265px;
     margin: 0 auto; }
-  .carousel-panel ul[rn-carousel] li {
-    height: 265px; }
 
 #page h1 {
   text-align: center; }
@@ -231,6 +230,12 @@ input[type="text"], input[type="password"], input[type="name"], input[type="emai
     float: none;
     width: 100%; }
 
+  .carousel-panel ul[rn-carousel], .carousel-panel ul[rn-carousel] li {
+    height: 300px; }
+
+  .carousel-panel .carousel-image {
+    height: 200px; }
+
   .carousel-panel {
     height: auto; }
 
@@ -238,7 +243,6 @@ input[type="text"], input[type="password"], input[type="name"], input[type="emai
     width: 100%; }
 
   .entry-panel .actions p, .entry-panel .actions a {
-    display: block;
     text-align: center; }
 
   .button-primary {
@@ -283,6 +287,12 @@ input[type="text"], input[type="password"], input[type="name"], input[type="emai
     padding: 50px 40px; }
 
   .bk-home {
-    display: block; } }
+    display: block; }
+
+  .carousel-panel .carousel-image {
+    height: 140px; }
+
+  .carousel-panel ul[rn-carousel], .carousel-panel ul[rn-carousel] li {
+    height: 265px; } }
 
 /*# sourceMappingURL=style.css.map */

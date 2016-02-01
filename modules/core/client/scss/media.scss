@@ -17,6 +17,14 @@
     width: 100%;
   }
 
+  .carousel-panel ul[rn-carousel], .carousel-panel ul[rn-carousel] li {
+    height: 300px;
+  }
+
+  .carousel-panel .carousel-image {
+    height: 200px;
+  }
+
   .carousel-panel {
     height: auto;
   }
@@ -26,7 +34,6 @@
   }
 
   .entry-panel .actions p, .entry-panel .actions a {
-    display: block;
     text-align: center;
   }
 
@@ -84,5 +91,13 @@
 
   .bk-home {
     display: block;
+  }
+
+  .carousel-panel .carousel-image {
+     height: 140px;
+  }
+
+  .carousel-panel ul[rn-carousel], .carousel-panel ul[rn-carousel] li {
+    height: 265px;
   }
 }
