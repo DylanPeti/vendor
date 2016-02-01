@@ -36,12 +36,12 @@
   <!-- Augmented products carousel -->
   <div class="carousel-panel" ng-controller="CarouselController">
     
-    <div class="carousel-content">
+    <div class="carousel-inner">
       
       <h4 class="carousel-title">New in Vend</h4>
-      <ul rn-carousel rn-carousel-auto-slide rn-carousel-index class="image">
+      <ul rn-carousel rn-carousel-auto-slide rn-carousel-index="carouselIndex" class="image">
         
-        <li ng-repeat="image in Images">
+        <li ng-repeat="image in Images" active="image.active">
           <div ng-style="{'background-image': 'url(' + image.image + ')'}" class="carousel-image ng-binding">
           </div>
           <div class="carousel-caption">
@@ -49,10 +49,12 @@
           </div>
           
         </li>
-        
-        <div rn-carousel-indicators ng-if="Images.length > 1" slides="Images" rn-carousel-index="carouselIndex" ng-click="goToSlide($index)" class="carousel-indicators"></div>
+
       </ul>
+      <div rn-carousel-indicators ng-if="Images.length > 1" slides="Images" rn-carousel-index="carouselIndex" class="carousel-indicators"></div>
       
     </div>
+
+
   </div>
 </div>

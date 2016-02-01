@@ -6,7 +6,7 @@ angular.module('vendor').controller('BodyController', ['$scope', '$location', 'A
 		$scope.authentication = Authentication;
 		
 		//If the user is not
-		if (!$scope.authentication.user) $location.path('/authentication/signin');
+		if (!$scope.authentication.user) $location.path('/signin');
 		$scope.welcome = "welcome";
 	}
 ]);

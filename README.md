@@ -4,25 +4,24 @@ The set of tools used for developing this app, is typically called a MEAN stack.
 the stacks dependencies: [MongoDB](http://www.mongodb.org/), [Node.js](http://www.nodejs.org/), [Express](http://expressjs.com/), and [AngularJS](http://angularjs.org/)
 
 ## Vendor Technologies
-**About: **
+**About:**
 I chose to use these technologies because of its simplicity as a software bundle. I was also looking for something I could utilise that would build on my knowledge of front-end technologies. I have some expereince in this area and this was a great oppurtunity to extend on my own toolbelt. I had some issues setting up authentication but resolved this by parsing json passport middleware. 
 
-**Technologies**
+**Technologies:**
 * MongoDB, Node.js, Express and AngularJS
 * Grunt, npm, SCSS, swig, sweetalert, bootstrap
 
-**Grunt**
+**Grunt:**
 I chose grunt as a task runner sass compilation and css linting. There were are other options to minify JS but decided not to for demo purposes and the applications size. 
 
-**Passport: **
-Vendor utilises [passport](http://passportjs.org/) - simple authentication middleware. The app uses auth endpoints to handle its local strategy. On sign in, Passport will then invoke our configuration, passes the email and password to its verification method and checks for matching credentials in the database. AngularJS will either redirect a successful user to the welcome page or attach the error properties to the scope which will be available to the form via the ng-bind directive as validation feedback. 
+**Passport:**
+Vendor utilises [passport](http://passportjs.org/) - simple authentication middleware. The app uses auth endpoints to handle its local strategy. On sign in, Passport will then invoke our configuration, passes the email and password to its verification method and checks for matching credentials in the database. AngularJS will either redirect a successful user to the welcome page or attach the error properties to the scope which will be available to the form via the ng-bind directive as validation feedback. The signup page works in similar fashion. 
 
-The signup page works in similar fashion. 
-
-**Views: **
+**Views:**
 The main templates are tied using swig templating. Each route is determined by custom Node.js methods which serve each route with the index template. The index template includes the rendered template configured through angulars service provider: $routeProvider - set up on our client route config. The template is included using angulars ng-view directive. Serving each template this way meant I was able to focus more on the HTML scaffolding and scss styling without too much route configuration and repitive templating. 
 
-Scss is also great for setting up our mixins and nesting. I didn't want too many class selectors. This is easily manageable though scss which prevents too much dumping of code and targets elements easily. Cusom media queries are also served through a seperate media file. Scss imports this file before compiling into .css which prevents extra HTTP requests.
+**Scss:**
+Scss is great for setting up our mixins and nesting. I didn't want too many class selectors. This is easily manageable though scss which prevents too much dumping of code and targets elements easily. Cusom media queries are also served through a seperate media file. Scss imports this file before compiling into .css which prevents extra HTTP requests.
 
 ## Before You Begin 
 Before you begin I recommend you read about the basic building blocks that assemble a MEAN application: 
@@ -61,7 +60,7 @@ $ npm install
 ```
 $ bower install
 ```
-*Run your app**
+**Run your app**
 ```
 $ grunt
 ```
