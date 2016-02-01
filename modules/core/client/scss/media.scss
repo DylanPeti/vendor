@@ -1,0 +1,88 @@
+@media (min-width: 320px) {
+  .bk-home {
+    background-image: none;
+  }
+
+  .center {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    float: none;
+    transform: none;
+  }
+
+  .entry-panel, .carousel-panel {
+    float: none;
+    width: 100%;
+  }
+
+  .carousel-panel {
+    height: auto;
+  }
+
+  .button-primary, .button-danger {
+    width: 100%;
+  }
+
+  .entry-panel .actions p, .entry-panel .actions a {
+    display: block;
+    text-align: center;
+  }
+
+  .button-primary {
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: 768px) {
+  .bk-home {
+    @include background("/core/client/img/bk-home.jpg", cover);
+  }
+
+  .entry-panel .actions p, .entry-panel .actions a {
+    text-align: left;
+  }
+
+  .button-primary {
+    margin-bottom: 0;
+  }
+
+  .center {
+    position: absolute;
+    left: 50%;
+    width: 800px;
+    transform: translateX(-50%);
+    top: 100px;
+  }
+
+  .entry-panel {
+    float: right;
+    width: 66.6%;
+    background-color: #fff;
+  }
+
+  #signup-panel.entry-panel, #page {
+    float: none;
+    margin: 0 auto;
+  }
+
+  .button-primary, .button-danger {
+    width: 200px;
+  }
+
+  .button-primary {
+    float: right;
+  }
+
+  .carousel-panel {
+    width: calc(99.9%/3);
+    height: 100%;
+    float: left;
+    padding: 50px 40px;
+  }
+
+  .bk-home {
+    display: block;
+  }
+}

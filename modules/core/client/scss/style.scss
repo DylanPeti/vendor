@@ -1,4 +1,5 @@
-$vendColor: #41af4b;
+$vendGreen: #41af4b;
+$vendRed: #d9534f;
 $vendText: #404040;
 $fontMain: "proxima-nova", sans-serif;
 
@@ -21,137 +22,127 @@ h4 {
   text-transform: uppercase;
   margin: 0;
 }
+
 h5 {
   color: #f5f4f4;
 }
 
 a, a:hover {
-color: #589ee1;
-text-decoration: none;
+  color: #589ee1;
+  text-decoration: none;
 }
-
 
 ul {
-list-style: none;
+  list-style: none;
 }
 
-.primary-btn {
-    background-color: $vendColor;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-weight: 500;
-    letter-spacing: 1px;
-    transition: color .2s, background-color .2s, border-color .2s;
+.button-primary {
+  background-color: $vendGreen;
 }
 
-.btn-logout{
-    background-color: #d9534f;
-    display: block;
-    margin: 20px auto 0 auto;
-    width: 200px;  
-    height: 45px;
-    color: #fff;
-    background-color: #d9534f;
-    border-color: #d43f3a;
-    display: block;
-    box-shadow: none;
-    border-radius: 3px;
-    border: none;
+.button-primary, .button-danger {
+  display: block;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: color .2s, background-color .2s, border-color .2s;
+  height: 50px;
+  border-radius: 3px;
 }
 
+.button-danger {
+  display: block;
+  background-color: $vendRed;
+  margin: 0 auto;
+}
 
 input[type="text"], input[type="password"], input[type="name"], input[type="email"] {
-   color: $vendText;
-   border: 2px solid #f5f4f4;
-   border-radius: 0;
-   height: 40px;
-   margin-bottom: 10px;
-   box-shadow: none;
+  color: $vendText;
+  border: 2px solid #f5f4f4;
+  border-radius: 0;
+  height: 40px;
+  margin-bottom: 10px;
+  box-shadow: none;
 }
-
 
 .header {
-position: relative;
-width: 100%;
-height: 40px;
-background-color: $vendText;
-color: #c9c9c9;
+  position: relative;
+  width: 100%;
+  height: 40px;
+  background-color: $vendText;
+  color: #c9c9c9;
 }
 
-.header ul li{
-    display: inline-block;
-    line-height: 40px;
-    padding: 0 20px;
+.header ul li {
+  display: inline-block;
+  line-height: 40px;
+  padding: 0 20px;
 }
 
 .header .toolbar-left {
-float: left;
+  float: left;
 }
 
 .header .toolbar-right {
-float: right;
+  float: right;
 }
 
 .toolbar-right-items {
-float: left;
+  float: left;
 }
+
 .toolbar-right-icons {
-float: right;
+  float: right;
 }
 
 .header ul li .talk, .header ul li .phone, .header ul li .language {
-position: relative;
-width: 20px;
-height: 40px;
-background-size: contain;
+  position: relative;
+  width: 20px;
+  height: 40px;
+  background-size: contain;
 }
 
-
-
 .header ul li .talk {
-  @include background('/core/client/img/chat_icon.svg', auto);
+  @include background("/core/client/img/chat_icon.svg", auto);
 }
 
 .header ul li .phone {
-  @include background('/core/client/img/phone_icon.svg', auto);
+  @include background("/core/client/img/phone_icon.svg", auto);
 }
 
 .header ul li .language {
-  @include background('/core/client/img/flag-nz.svg', auto);
+  @include background("/core/client/img/flag-nz.svg", auto);
 }
 
 .bk-home {
-  @include background('/core/client/img/bk-home.jpg', cover);
   position: relative;
   width: 100%;
   height: calc(100vh - 40px);
 }
 
-
 /** entry panel nesting */
 
-.center{
-top: 100px;
-left: 50%;
-transform: translateX(-50%);
--webkit-transform: translateX(-50%);
--ms-transform: translateX(-50%);
-display: block;
-height: auto;
-background-color: transparent;
+.center {
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  display: block;
+  height: auto;
+  background-color: transparent;
 }
 
 #signup-panel form {
   margin-top: 15px;
 }
 
-
 #signin-panel .actions a {
   line-height: 50px;
 }
-
 
 .entry-panel {
   margin: 0;
@@ -162,18 +153,17 @@ background-color: transparent;
   width: 66.6%;
   background-color: #fff;
 
-
   fieldset {
     clear: both;
   }
 
-  .form-title{
+  .form-title {
     width: 100%;
     height: 57px;
     display: inline-block;
-    background: #fff url(' /core/client/img/vend-tag-logo.svg') no-repeat 0% 0%;
+    background: #fff url(" /core/client/img/vend-tag-logo.svg") no-repeat 0% 0%;
   }
-  
+
   .form-title h1 {
     padding-left: 140px;
     line-height: 57px;
@@ -201,7 +191,6 @@ background-color: transparent;
     margin-top: 10px;
     float: left;
   }
-
 }
 
 .carousel-panel {
@@ -223,7 +212,7 @@ background-color: transparent;
     width: 100%;
     height: 57px;
     margin-top: 0;
-   }  
+  }
 
   .carousel-image {
     text-align: right;
@@ -232,30 +221,30 @@ background-color: transparent;
     height: 100%;
     max-height: 140px;
     background-position: center center;
-   }
+  }
 
   .carousel-caption {
-   position: relative;
-   padding-bottom: 30px;
-   text-align: left;
-   margin: 10px 0 0 0;
-   padding: 0;
-   left: 0;
-   text-shadow: none;
-   float: left
+    position: relative;
+    padding-bottom: 30px;
+    text-align: left;
+    margin: 10px 0 0 0;
+    padding: 0;
+    left: 0;
+    text-shadow: none;
+    float: left;
   }
 
   .carousel-description {
-  margin-top: 20px;
-  font-weight: 600;
+    margin-top: 20px;
+    font-weight: 600;
   }
 
   .carousel-indicators {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  height: 55px;
-  clear: both;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    height: 55px;
+    clear: both;
   }
 
   .carousel-indicators .active {
@@ -263,190 +252,35 @@ background-color: transparent;
   }
 
   .rn-carousel-indicator span {
-  font-size: 24px;
-  padding: 0 5px;
+    font-size: 24px;
+    padding: 0 5px;
   }
 
   .rn-carousel-indicator {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%) !important;
-  -ms-transform: translateX(-50%);
-  display: block;
-  margin: 0 auto;
-  text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%) !important;
+    -ms-transform: translateX(-50%);
+    display: block;
+    margin: 0 auto;
+    text-align: center;
   }
 
   ul[rn-carousel] {
     width: 100%;
     height: 265px;
-    margin: 0 auto
+    margin: 0 auto;
   }
 
   ul[rn-carousel] li {
     height: 265px;
   }
-
 }
 
-
-
-.signup-box {
-padding: 50px 40px;
-float: none;
-width: 100%;
-background-color: #fff;
+#page h1 {
+  text-align: center;
 }
 
-
-
-.singup-action a {
-    float: none;
-    line-height: 50px;
-}
-
-.primary-btn{
-height: 50px;
-border-radius: 3px;
-}
-
-
-.welcome {
-    background-color: #fcfcfc;
-    border: 1px solid #eee;
-    margin: 0 auto;
-    width: 100%;
-    position: relative;
-    padding: 20px 20px 40px 20px;
-    border-radius: 5px;
-    max-width: 555px;
-    top: 100px;
-}
-
-.welcome h1 {
-text-align: center;
-
-}
-
-#slides_control > div {
-  height: 200px;
-}
-
-img {
-  margin: auto;
-  width: 400px;
-}
-
-#slides_control {
-  position: absolute;
-  width: 400px;
-  left: 50%;
-  top: 20px;
-  margin-left: -200px;
-}
-
-
-
-
-    /*==========  Desktop First Method  ==========*/
-
-    @media (min-width: 320px) {
-
-        .header {
-        	// display: none;
-        }
-
-    	.center, section#signup {
-    		position: relative;
-    		top: 0;
-    		left: 0;
-    		width: 100%;
-    		float: none;
-    		transform: none;
-    		
-    		
-    	}
-
-    	.entry-panel, .carousel-panel {
-    		float: none;
-    		width: 100%;
-    	}
-    	.carousel-panel {
-    		height: auto;
-    	}
-        
-        .primary-btn {
-        	width: 100%;
-        }
-
-
-    }
-
-
-     @media (min-width: 768px) {
-
-
-
-     	.center {
-     		position: absolute;
-     		left: 50%;
-     		width: 800px;
-     		transform: translateX(-50%);
-     		top: 100px;
-
-     	}
-
-
-
-      section#signup {
-        position: absolute;
-        left: 50%;
-        width: 550px;
-        transform: translateX(-50%);
-        top: 100px;
-
-      }
-
-     	.entry-panel {
-          float: right;
-          width: 66.6%;
-          background-color: #fff;
-
-          }
-       #signup-panel.entry-panel {
-         float: none;
-         margin: 0 auto;
-  
-      }
-    
-      .primary-btn {
-    		width: 200px;
-    		float: right;
-    	}
-
-
-
-       .carousel-panel {
-         width: calc(99.9%/3);
-         height: 100%;
-         float: left;
-         padding: 50px 40px;
-       }
-
-       .bk-home {
-        display: block;
-       }
-
-      
-    
-    }
-
-
-
-    
-
-
-   
-
+@import "media";

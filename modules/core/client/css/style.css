@@ -21,29 +21,25 @@ a, a:hover {
 ul {
   list-style: none; }
 
-.primary-btn {
-  background-color: #41af4b;
+.button-primary {
+  background-color: #41af4b; }
+
+.button-primary, .button-danger {
+  display: block;
   color: #fff;
   border: none;
   cursor: pointer;
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 1px;
-  transition: color .2s, background-color .2s, border-color .2s; }
+  transition: color .2s, background-color .2s, border-color .2s;
+  height: 50px;
+  border-radius: 3px; }
 
-.btn-logout {
-  background-color: #d9534f;
+.button-danger {
   display: block;
-  margin: 20px auto 0 auto;
-  width: 200px;
-  height: 45px;
-  color: #fff;
   background-color: #d9534f;
-  border-color: #d43f3a;
-  display: block;
-  box-shadow: none;
-  border-radius: 3px;
-  border: none; }
+  margin: 0 auto; }
 
 input[type="text"], input[type="password"], input[type="name"], input[type="email"] {
   color: #404040;
@@ -96,8 +92,6 @@ input[type="text"], input[type="password"], input[type="name"], input[type="emai
   background-size: auto; }
 
 .bk-home {
-  background: #404040 url("/core/client/img/bk-home.jpg") no-repeat 50% 50%;
-  background-size: cover;
   position: relative;
   width: 100%;
   height: calc(100vh - 40px); }
@@ -218,51 +212,14 @@ input[type="text"], input[type="password"], input[type="name"], input[type="emai
   .carousel-panel ul[rn-carousel] li {
     height: 265px; }
 
-.signup-box {
-  padding: 50px 40px;
-  float: none;
-  width: 100%;
-  background-color: #fff; }
-
-.singup-action a {
-  float: none;
-  line-height: 50px; }
-
-.primary-btn {
-  height: 50px;
-  border-radius: 3px; }
-
-.welcome {
-  background-color: #fcfcfc;
-  border: 1px solid #eee;
-  margin: 0 auto;
-  width: 100%;
-  position: relative;
-  padding: 20px 20px 40px 20px;
-  border-radius: 5px;
-  max-width: 555px;
-  top: 100px; }
-
-.welcome h1 {
+#page h1 {
   text-align: center; }
 
-#slides_control > div {
-  height: 200px; }
-
-img {
-  margin: auto;
-  width: 400px; }
-
-#slides_control {
-  position: absolute;
-  width: 400px;
-  left: 50%;
-  top: 20px;
-  margin-left: -200px; }
-
-/*==========  Desktop First Method  ==========*/
 @media (min-width: 320px) {
-  .center, section#signup {
+  .bk-home {
+    background-image: none; }
+
+  .center {
     position: relative;
     top: 0;
     left: 0;
@@ -277,20 +234,30 @@ img {
   .carousel-panel {
     height: auto; }
 
-  .primary-btn {
-    width: 100%; } }
+  .button-primary, .button-danger {
+    width: 100%; }
+
+  .entry-panel .actions p, .entry-panel .actions a {
+    display: block;
+    text-align: center; }
+
+  .button-primary {
+    margin-bottom: 25px; } }
 @media (min-width: 768px) {
+  .bk-home {
+    background: #404040 url("/core/client/img/bk-home.jpg") no-repeat 50% 50%;
+    background-size: cover; }
+
+  .entry-panel .actions p, .entry-panel .actions a {
+    text-align: left; }
+
+  .button-primary {
+    margin-bottom: 0; }
+
   .center {
     position: absolute;
     left: 50%;
     width: 800px;
-    transform: translateX(-50%);
-    top: 100px; }
-
-  section#signup {
-    position: absolute;
-    left: 50%;
-    width: 550px;
     transform: translateX(-50%);
     top: 100px; }
 
@@ -299,12 +266,14 @@ img {
     width: 66.6%;
     background-color: #fff; }
 
-  #signup-panel.entry-panel {
+  #signup-panel.entry-panel, #page {
     float: none;
     margin: 0 auto; }
 
-  .primary-btn {
-    width: 200px;
+  .button-primary, .button-danger {
+    width: 200px; }
+
+  .button-primary {
     float: right; }
 
   .carousel-panel {

@@ -1,4 +1,7 @@
-<div class="welcome" ng-controller="BodyController">
-        <h1>Welcome <span ng-bind="authentication.user.name"></span></h1>
-    	<a href="/api/auth/signout" target="_self"><button class="btn-logout">Logout</button></a>
+<div class="center" ng-controller="BodyController">
+	<div id="page" class="entry-panel">
+		<h1>Welcome <span ng-bind="authentication.user.name"></span></h1>
+		<a href="/api/auth/signout" target="_self"><button class="button-danger">Logout</button></a>
+	</div>
+</div>
 </div>

@@ -30,7 +30,7 @@ module.exports = {
 			'modules/*/client/less/*.less'
 		],
 		sass: [
-			'modules/core/client/scss/*.scss'
+			'modules/core/client/scss/style.scss'
 		],
 		js: [
 			'modules/*/client/*.js',
