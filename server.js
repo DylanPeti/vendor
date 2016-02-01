@@ -46,33 +46,12 @@ app.use(function(req, res, next){
 });
 
 
-// var newUser = User({
-//   name: 'james',
-//   email: 'lemon@gomomentum.marketing',
-//   password: 'triumph',
-//   provider: 'local'
-// });
-
-// newUser.save(function(err) {
-//   if (err) throw err;
-//   console.log('User created!');
-// });
-// 
-// 
-
-// var set = migrate.load('./config/migrations/.migrate', './config/migrations');
- 
-// set.up(function (err) {
-//   if (err) throw err;
- 
-//   console.log('Migration completed');
-// });
 
 // Use swig as the templating engine
 
 app.engine('html', swig.renderFile);
 app.set('view engine', 'html');
-app.set('views', __dirname + '/modules');
+app.set('views', __dirname + '/modules/');
 
 // Cache for production
 app.set('view cache', false);
