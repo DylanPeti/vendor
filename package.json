@@ -15,7 +15,6 @@
   "dependencies": {
     "angular-carousel": "^1.0.1",
     "body-parser": "latest",
-    "consolidate": "^0.14.0",
     "cookie-parser": "^1.4.1",
     "crypto": "0.0.3",
     "express": "latest",
@@ -23,7 +22,6 @@
     "grunt": "latest",
     "grunt-cli": "latest",
     "lodash": "latest",
-    "migrate": "^0.2.2",
     "mongodb": "^2.1.4",
     "mongoose": "latest",
     "passport": "^0.3.2",
@@ -47,8 +45,6 @@
     "grunt-karma": "latest",
     "grunt-protractor-runner": "latest",
     "grunt-contrib-sass": "latest",
-    "grunt-contrib-less": "latest",
-    "load-grunt-tasks": "latest",
-    "run-sequence": "latest"
+    "grunt-contrib-less": "latest"
   }
 }

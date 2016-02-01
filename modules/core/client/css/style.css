@@ -224,7 +224,7 @@ input[type="text"], input[type="password"], input[type="name"], input[type="emai
 #page h1 {
   text-align: center; }
 
-@media (min-width: 320px) {
+@media screen and (min-width: 320px) {
   .bk-home {
     background-image: none; }
 
@@ -257,7 +257,7 @@ input[type="text"], input[type="password"], input[type="name"], input[type="emai
 
   .button-primary {
     margin-bottom: 25px; } }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .bk-home {
     background: #404040 url("/core/client/img/bk-home.jpg") no-repeat 50% 50%;
     background-size: cover; }
